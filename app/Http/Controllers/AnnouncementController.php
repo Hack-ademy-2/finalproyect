@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Announcement;
 use Illuminate\Http\Request;
 
 class AnnouncementController extends Controller
@@ -9,7 +10,7 @@ class AnnouncementController extends Controller
     
    public function index()
    {
-      
+      return view('announcement.index');
 
    }
 
@@ -25,6 +26,8 @@ class AnnouncementController extends Controller
 
    public function store()
    {
+       $announcement = Announcement::create(request()->all());
+       return redirect()->route('announcement.index');
 
 
    }

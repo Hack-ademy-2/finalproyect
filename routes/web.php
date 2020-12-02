@@ -21,6 +21,17 @@ Route::get('/announcement/new', [HomeController::class,'newAnnouncement'])->name
 
 
 //Rutas para los Anuncios
+Route::get('announcement', [AnnouncementController::class, 'index'])->name('announcement.index');
 
-Route::post('/announcement/create', [AnnouncementController::class,'store'])->name('announcement.store');
-Route::get('/announcement/create', [AnnouncementController::class,'create'])->name('announcement.create');
+Route::get('announcement/create', [AnnouncementController::class, 'create'])->name('announcement.create');
+
+Route::post('announcement', [AnnouncementController::class,'store'])->name('announcement.store');
+
+Route::get('announcement/{announcement}', [AnnouncementController::class,'show'])->name('announcement.show');
+
+Route::get('announcement/{announcement}/edit', [AnnouncementController::class,'edit'])->name('announcement.edit');
+
+Route::match(['put','patch'], 'announcement/{announcement}', [AnnouncementController::class, 'update'])->name('announcement.update');
+
+Route::delete('announcement/{announcement}', [AnnouncementController::class, 'destroy'])->name('announcement.destroy');
+
