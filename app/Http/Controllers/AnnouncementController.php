@@ -6,5 +6,50 @@ use Illuminate\Http\Request;
 
 class AnnouncementController extends Controller
 {
-    //
+    
+   public function index()
+   {
+      
+
+   }
+
+   public function create()
+   {
+
+
+    //$this->middleware('auth');
+
+    return view('announcement.create');
+       
+   }
+
+   public function store()
+   {
+
+
+   }
+
+   public function show()
+   {
+    
+
+   }
+
+   public function edit()
+   {
+   
+    
+   }
+
+   public function update()
+   {
+       
+
+   }
+
+   public function destroy()
+   {
+    
+    
+   }
 }

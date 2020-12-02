@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AnnouncementController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,4 +17,10 @@ use App\Http\Controllers\HomeController;
 
 Route::get('/', [HomeController::class,'index'])->name('home');
 Route::get('/announcement/new', [HomeController::class,'newAnnouncement'])->name('announcement.new');
-Route::post('/announcement/create', [HomeController::class,'createAnnouncement'])->name('announcement.create');
+
+
+
+//Rutas para los Anuncios
+
+Route::post('/announcement/create', [AnnouncementController::class,'store'])->name('announcement.store');
+Route::get('/announcement/create', [AnnouncementController::class,'create'])->name('announcement.create');

@@ -5,16 +5,16 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">
-                    <form method="POST" action='{{route("announcement.create")}}'>
+                    <form method="POST" action=''>
                         @csrf
                         <div class="form-group">
                             <label for="categories">Categorias</label>
                             <select class="form-control" id="categories" name="category">
-                                @foreach ($categories as $category)
+                                {{-- @foreach ($categories as $category)
                                 <option value="{{$category->id}}" 
                                         {{old('category') == $category->id ? 'selected' : ''}}
                                     >{{$category->name}}</option>
-                                @endforeach
+                                @endforeach --}}
                             </select>
                         </div>
                         <div class="form-group">
