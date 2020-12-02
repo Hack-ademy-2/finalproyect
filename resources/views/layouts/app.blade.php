@@ -16,6 +16,7 @@
     <title>Mi wallapop</title>
   </head>
   <body>
+    @include('layouts.nav')
     @yield('content')
 
   </body>

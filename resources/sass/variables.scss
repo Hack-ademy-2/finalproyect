@@ -1,5 +1,10 @@
 // Colors
 
+$primary-color: #42CAFD;
+$secondaruy-color: #464D77;
+$blanco: #FFF;
+$negro: #000;
+
 
 // Typography
 $font-primary: 'Ubuntu', sans-serif;
@@ -8,9 +13,18 @@ $line-height-base: 1.6;
 
 
 
-
-
-
 *{
     font-family: $font-primary;
+}
+
+
+.primary-color{
+    background-color: $primary-color;
+}
+.primary-color i {
+    font-size: 35px;
+    color: $blanco;
+}
+.btn-secundary-color{
+    background-color: $secondaruy-color;
 }
