@@ -16,3 +16,4 @@ use App\Http\Controllers\HomeController;
 
 Route::get('/', [HomeController::class,'index'])->name('home');
 Route::get('/announcement/new', [HomeController::class,'newAnnouncement'])->name('announcement.new');
+Route::post('/announcement/create', [HomeController::class,'createAnnouncement'])->name('announcement.create');
