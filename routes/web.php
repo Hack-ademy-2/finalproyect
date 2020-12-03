@@ -18,20 +18,23 @@ use App\Http\Controllers\AnnouncementController;
 Route::get('/', [HomeController::class,'index'])->name('home');
 Route::get('/announcement/new', [HomeController::class,'newAnnouncement'])->name('announcement.new');
 
-
-
 //Rutas para los Anuncios
-Route::get('announcement', [AnnouncementController::class, 'index'])->name('announcement.index');
 
-Route::get('announcement/create', [AnnouncementController::class, 'create'])->name('announcement.create');
+//GET
 
-Route::post('announcement', [AnnouncementController::class,'store'])->name('announcement.store');
+Route::get('/announcement', [AnnouncementController::class, 'index'])->name('announcement.index');
 
-Route::get('announcement/{announcement}', [AnnouncementController::class,'show'])->name('announcement.show');
+Route::get('/announcement/create', [AnnouncementController::class, 'create'])->name('announcement.create');
 
-Route::get('announcement/{announcement}/edit', [AnnouncementController::class,'edit'])->name('announcement.edit');
+Route::get('/announcement/{announcement}', [AnnouncementController::class,'show'])->name('announcement.show');
 
-Route::match(['put','patch'], 'announcement/{announcement}', [AnnouncementController::class, 'update'])->name('announcement.update');
+Route::get('/announcement/{announcement}/edit', [AnnouncementController::class,'edit'])->name('announcement.edit');
 
-Route::delete('announcement/{announcement}', [AnnouncementController::class, 'destroy'])->name('announcement.destroy');
+//MATCH
+Route::match(['put','patch'], '/announcement/{announcement}', [AnnouncementController::class, 'update'])->name('announcement.update');
 
+//DELETE
+Route::delete('/announcement/{announcement}', [AnnouncementController::class, 'destroy'])->name('announcement.destroy');
+
+//POST
+Route::post('/announcement', [AnnouncementController::class,'store'])->name('announcement.create');

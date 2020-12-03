@@ -5,22 +5,22 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">
-                    <form method="POST" action=''>
+                    <form method="POST" action="{{route('announcement.create')}}">
                         @csrf
                         <div class="form-group">
                             <label for="categories">Categorias</label>
-                            <select class="form-control" id="categories" name="category">
-                                {{-- @foreach ($categories as $category)
-                                <option value="{{$category->id}}" 
-                                        {{old('category') == $category->id ? 'selected' : ''}}
-                                    >{{$category->name}}</option>
-                                @endforeach --}}
+                            <select class="custom-select" id="categories" name="category[]" multiple>
+                                @foreach ($categories as $category)
+                                <option> 
+                                {{$category['name']}}
+                                </option>
+                                @endforeach
                             </select>
                         </div>
                         <div class="form-group">
                             <label for="announcementeName">Titulo</label>
                             <input type="text" class="form-control" id="announcementeName" aria-describedby="emailHelp"
-                        name="title" value="{{old("title")}}">
+                        name="title">
                         </div>
                         <div class="form-group">
                             <label for="announcementeBody">Anuncio</label>

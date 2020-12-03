@@ -9,18 +9,33 @@ class AnnouncementController extends Controller
 {
     
    public function index()
-   {
-      return view('announcement.index');
+   {  
+      
+      $announcement = Announcement::all();
+
+      return view('announcement.index',compact ('announcement'));
 
    }
 
-   public function create()
+   public function create(Request $request)
    {
 
+      $categories = [
+         ['name'=>'Bicicletas'],
+         ['name'=>'Coleccionismo'],
+         ['name'=>'Consolas y Videojuegos'],
+         ['name'=>'Deporte y Ocio'],
+         ['name'=>'Electrodomésticos'],
+         ['name'=>'Hogar y Jardín'],
+         ['name'=>'Inmobiliaria'],
+         ['name'=>'Moda y Accesorios'],
+         ['name'=>'TV, Audio y Foto'],
+         ['name'=>'Servicios'],
 
+      ];
     //$this->middleware('auth');
 
-    return view('announcement.create');
+    return view('announcement.create', compact('categories'));
        
    }
 
