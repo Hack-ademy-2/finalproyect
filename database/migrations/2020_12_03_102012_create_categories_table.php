@@ -21,11 +21,11 @@ class CreateCategoriesTable extends Migration
         });
         $categories = [
             'motores', 'auto', 'electrodomésticos', 'libros', 
-            'juegos', 'deporte', 'imobiles', 'moviles', 'mobiliario'
+            'juegos', 'deporte', 'ocio', 'moviles', 'mobiliario'
         ];
 
         foreach ($categories as $category) {
-            $c = New Category();
+            $c = new Category();
             $c->name = $category;
             $c->save();
         }
