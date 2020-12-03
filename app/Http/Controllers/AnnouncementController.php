@@ -12,6 +12,7 @@ class AnnouncementController extends Controller
     
    public function index()
    {  
+      dd($request->all());
       
       $announcement = Announcement::all();
 
