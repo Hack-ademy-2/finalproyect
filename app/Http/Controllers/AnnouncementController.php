@@ -43,7 +43,7 @@ class AnnouncementController extends Controller
       $a->title = $request->input('title');
       $a->body = $request->input('body');
       $a->category_id = $request->input('category');
-      
+      $a->user_id = Auth::id();
       $a->save();
 
       return redirect()->route('home')->with('announcement.create.success','Anuncio creado con exito');
