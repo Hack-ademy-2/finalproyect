@@ -37,4 +37,4 @@ Route::match(['put','patch'], '/announcement/{announcement}', [AnnouncementContr
 Route::delete('/announcement/{announcement}', [AnnouncementController::class, 'destroy'])->name('announcement.destroy');
 
 //POST
-Route::post('/announcement', [AnnouncementController::class,'store'])->name('announcement.create');
+Route::post('/announcement', [AnnouncementController::class,'store'])->name('announcement.store');

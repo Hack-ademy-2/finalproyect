@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Announcement;
 use Illuminate\Http\Request;
+use App\Http\Requests\AnnouncementRequest;
 
 class AnnouncementController extends Controller
 {
@@ -13,36 +14,25 @@ class AnnouncementController extends Controller
       
       $announcement = Announcement::all();
 
-      return view('announcement.index',compact ('announcement'));
+      return view('announcement.index');
 
    }
 
-   public function create(Request $request)
+   public function create()
    {
-
-      $categories = [
-         ['name'=>'Bicicletas'],
-         ['name'=>'Coleccionismo'],
-         ['name'=>'Consolas y Videojuegos'],
-         ['name'=>'Deporte y Ocio'],
-         ['name'=>'Electrodomésticos'],
-         ['name'=>'Hogar y Jardín'],
-         ['name'=>'Inmobiliaria'],
-         ['name'=>'Moda y Accesorios'],
-         ['name'=>'TV, Audio y Foto'],
-         ['name'=>'Servicios'],
-
-      ];
+      
+    
     //$this->middleware('auth');
 
-    return view('announcement.create', compact('categories'));
+    return view('announcement.create');
        
    }
 
-   public function store()
-   {
+   public function store(AnnouncementRequest $request)
+   {  
+
        $announcement = Announcement::create(request()->all());
-       return redirect()->route('announcement.index');
+       return redirect()->route('announcement.create');
 
 
    }

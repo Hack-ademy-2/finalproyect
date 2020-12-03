@@ -68,6 +68,12 @@
                                 </button>
                             </div>
                         </div>
+                        <div class="form-group row mt-4">
+                            <div class="col-md-6 offset-md-4">
+                                <p>Ya estas registrado?</p>
+                                <p><a href="{{route('login')}}"> Logueate!</a></p>
+                            </div>
+                        </div>
                     </form>
                 </div>
             </div>
