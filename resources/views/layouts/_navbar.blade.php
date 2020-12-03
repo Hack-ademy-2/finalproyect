@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg primary-color sticky-top">
-    <a class="navbar-brand text-white" href="{{route('home')}}">AWLAPOP</a>
+    <a class="navbar-brand text-white" href="{{route('home')}}">AulaPOP</a>
     <a href=""><i class="fas fa-cloud-upload-alt"></i></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -11,10 +11,7 @@
                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>Categories</a>
                 <div class="dropdown-menu dropdown-menu-right text-white" aria-labelledby="navbarDropdown">
                     @foreach($categories as $category)
-                    <a class="dropdown-item"
-                        href="{{route('announcement.category',['name'=>$category->name,'id'=>$category->id])}}">
-                        {{$category->name}}
-                    </a>
+                        @include('announcement._announcement')
                     @endforeach
                 </div>
             </li>

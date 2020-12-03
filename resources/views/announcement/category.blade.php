@@ -33,12 +33,13 @@
 
         @endforelse
         
-        <div class="row my-3">
-            <div class="col-12 col-md-8 offset-md-2">
-                {{$announcements->links()}}
-            </div>
-        </div>
+        
 
+    </div>
+    <div class="row my-3">
+        <div class="col-12 col-md-8 offset-md-2">
+            {{$announcements->links()}}
+        </div>
     </div>
 
 </div>
