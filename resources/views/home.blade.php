@@ -25,13 +25,7 @@
 
         <h2>No hay anuncios a mostrar</h2>
 
-<<<<<<< HEAD
-@forelse ($announcements as $announcement)
-<p>{{$announcement->title}}</p>
-<p>{{$announcement->category->name}}</p>
-=======
         @endforelse
->>>>>>> cdb74703a95206557d9f3ad8e40e473ac846319e
 
     </div>
 

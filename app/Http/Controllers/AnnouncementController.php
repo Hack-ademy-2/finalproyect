@@ -32,15 +32,8 @@ class AnnouncementController extends Controller
         return redirect()->route('home');
       
       $categories = Category::all();
-<<<<<<< HEAD
 
       return view('announcement.create', compact('categories'));
-=======
-      
-    
-    return view('announcement.create',compact('categories'));
-
->>>>>>> cdb74703a95206557d9f3ad8e40e473ac846319e
        
    }
 
@@ -52,11 +45,7 @@ class AnnouncementController extends Controller
       $a->title = $request->input('title');
       $a->body = $request->input('body');
       $a->category_id = $request->input('category');
-<<<<<<< HEAD
       
-=======
-
->>>>>>> cdb74703a95206557d9f3ad8e40e473ac846319e
       $a->save();
 
       return redirect()->route('home')->with('announcement.create.success','Anuncio creado con exito');
