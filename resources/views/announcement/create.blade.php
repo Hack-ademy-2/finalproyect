@@ -38,7 +38,13 @@
                         </small>
                         @enderror
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <strong>Imagen:</strong>
+                            <input type="file" name="image">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Crear Anuncio</button>
                     </form>
                 </div>
             </div>

@@ -12,7 +12,7 @@
 
 @forelse ($announcements as $announcement)
 <p>{{$announcement->title}}</p>
-<p>{{$announcement->category_id}}</p>
+<p>{{$announcement->category->name}}</p>
 
 
     

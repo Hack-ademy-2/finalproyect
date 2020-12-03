@@ -9,6 +9,12 @@ use App\Http\Requests\AnnouncementRequest;
 
 class AnnouncementController extends Controller
 {
+
+   public function __construct()
+   {
+      $this->middleware('auth');
+   }
+
     
    public function index()
    {  
@@ -22,11 +28,8 @@ class AnnouncementController extends Controller
    public function create()
    {
       $categories = Category::all();
-      
-    
-    //$this->middleware('auth');
 
-    return view('announcement.create', compact('categories'));
+      return view('announcement.create', compact('categories'));
        
    }
 
@@ -37,6 +40,7 @@ class AnnouncementController extends Controller
       $a->title = $request->input('title');
       $a->body = $request->input('body');
       $a->category_id = $request->input('category');
+      
       $a->save();
       return redirect()->route('home')->with('announcement.create.success','Anuncio creado con exito');
 
