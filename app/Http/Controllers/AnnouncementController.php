@@ -30,9 +30,18 @@ class AnnouncementController extends Controller
 
    public function store(AnnouncementRequest $request)
    {  
+      //Paso a Paso
+      $a = new Announcement();
+      $a->title = $request->input('title');
+      $a->body = $request->input('body');
+      $a->category_id = $request->input('category');
+      $a->save();
+      return redirect()->route('home')->with('announcement.create.success','Anuncio creado con exito');
 
-       $announcement = Announcement::create(request()->all());
-       return redirect()->route('announcement.create');
+
+      //Llamada de golpe
+      // $announcement = Announcement::create(request()->all());
+      // return redirect()->route('announcement.create');
 
 
    }
