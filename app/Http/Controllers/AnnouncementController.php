@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use App\Models\Announcement;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\AnnouncementRequest;
 
 class AnnouncementController extends Controller
@@ -27,21 +28,37 @@ class AnnouncementController extends Controller
 
    public function create()
    {
+      if(!$user_id = Auth::id())
+        return redirect()->route('home');
+      
       $categories = Category::all();
+<<<<<<< HEAD
 
       return view('announcement.create', compact('categories'));
+=======
+      
+    
+    return view('announcement.create',compact('categories'));
+
+>>>>>>> cdb74703a95206557d9f3ad8e40e473ac846319e
        
    }
 
    public function store(AnnouncementRequest $request)
    {  
       //Paso a Paso
+
       $a = new Announcement();
       $a->title = $request->input('title');
       $a->body = $request->input('body');
       $a->category_id = $request->input('category');
+<<<<<<< HEAD
       
+=======
+
+>>>>>>> cdb74703a95206557d9f3ad8e40e473ac846319e
       $a->save();
+
       return redirect()->route('home')->with('announcement.create.success','Anuncio creado con exito');
 
 
