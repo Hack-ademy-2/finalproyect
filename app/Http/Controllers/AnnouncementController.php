@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Announcement;
 use Illuminate\Http\Request;
 use App\Http\Requests\AnnouncementRequest;
@@ -21,16 +22,17 @@ class AnnouncementController extends Controller
    public function create()
    {
       
-    
+   $categories = Category::all();
     //$this->middleware('auth');
 
-    return view('announcement.create');
+    return view('announcement.create',compact('categories'));
        
    }
 
    public function store(AnnouncementRequest $request)
    {  
       //Paso a Paso
+
       $a = new Announcement();
       $a->title = $request->input('title');
       $a->body = $request->input('body');

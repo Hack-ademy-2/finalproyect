@@ -45,7 +45,7 @@ name="title" value="{{old("title")}}">
       <small id="emailHelp" class="form-text" style="color:red;">
         {{ $message }}
       </small>
-    @enderrorDB::connection()->getPdo();
+    @enderror
 </div>
 <button type="submit" class="btn btn-primary">Submit</button>
 </form>
