@@ -21,6 +21,8 @@ Route::get('/announcement/new', [HomeController::class,'newAnnouncement'])->name
 Route::get('/', [PublicController::class,'index'])->name('home');
 //Rutas para los Anuncios
 
+Route::get('/category/{name}/{id}/announcements', [PublicController::class,'announcementsByCategory'])->name('announcement.category');
+
 //GET
 
 Route::get('/announcement', [AnnouncementController::class, 'index'])->name('announcement.index');
