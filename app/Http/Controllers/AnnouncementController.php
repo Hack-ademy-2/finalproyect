@@ -21,11 +21,13 @@ class AnnouncementController extends Controller
 
    public function create()
    {
+      $categories = Category::all();
       
    $categories = Category::all();
     //$this->middleware('auth');
-
+    
     return view('announcement.create',compact('categories'));
+
        
    }
 
@@ -42,8 +44,8 @@ class AnnouncementController extends Controller
 
 
       //Llamada de golpe
-      // $announcement = Announcement::create(request()->all());
-      // return redirect()->route('announcement.create');
+//$announcement = Announcement::create(request()->all());
+      //return redirect()->route('announcement.create');
 
 
    }

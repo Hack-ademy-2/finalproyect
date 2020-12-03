@@ -25,7 +25,7 @@ class CreateCategoriesTable extends Migration
         ];
 
         foreach ($categories as $category) {
-            $c = New Category();
+            $c = new Category();
             $c->name = $category;
             $c->save();
         }
