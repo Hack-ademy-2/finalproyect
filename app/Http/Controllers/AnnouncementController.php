@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use App\Models\Announcement;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\AnnouncementRequest;
 
 class AnnouncementController extends Controller
@@ -12,7 +13,6 @@ class AnnouncementController extends Controller
     
    public function index()
    {  
-      dd($request->all());
       
       $announcement = Announcement::all();
 
@@ -22,10 +22,11 @@ class AnnouncementController extends Controller
 
    public function create()
    {
+      if(!$user_id = Auth::id())
+        return redirect()->route('home');
+      
       $categories = Category::all();
       
-   $categories = Category::all();
-    //$this->middleware('auth');
     
     return view('announcement.create',compact('categories'));
 
@@ -40,7 +41,9 @@ class AnnouncementController extends Controller
       $a->title = $request->input('title');
       $a->body = $request->input('body');
       $a->category_id = $request->input('category');
+
       $a->save();
+
       return redirect()->route('home')->with('announcement.create.success','Anuncio creado con exito');
 
 
