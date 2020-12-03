@@ -3,17 +3,9 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-        @if ($errors->any())
-            <div class="alert alert-danger px-0 py-2">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
-        @endif
-            <div class="card">
+            <div class="card m-5">
                 <div class="card-header">
+                    <h2>Crear tu Anuncio</h2>
                     <form method="POST" action="{{route('announcement.store')}}">  
                     @csrf
                     <div class="form-group">

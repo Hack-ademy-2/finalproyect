@@ -7,4 +7,19 @@
 @endif
 
 <h1>hola</h1>
+
+
+
+@forelse ($announcements as $announcement)
+<p>{{$announcement->title}}</p>
+<p>{{$announcement->category_id}}</p>
+
+
+    
+@empty
+<h2>No hay anuncios a mostrar</h2>
+    
+@endforelse
+
+
 @endsection
