@@ -28,8 +28,6 @@ class AnnouncementController extends Controller
 
    public function create()
    {
-      if(!$user_id = Auth::id())
-        return redirect()->route('home');
       
       $categories = Category::all();
 
