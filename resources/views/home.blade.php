@@ -21,7 +21,7 @@
         <div class="col-12 mt-5">
             <h2>No hay anuncios para mostrar! Regresa más tarde</h2>
         </div>
-    </div>
+    </div
 
     @endforelse
 

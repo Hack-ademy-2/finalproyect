@@ -20,7 +20,6 @@ use App\Http\Controllers\AnnouncementController;
 //Route::get('/', [HomeController::class,'index'])->name('home');
 Route::get('/announcement/new', [HomeController::class,'newAnnouncement'])->name('announcement.new');
 Route::get('/', [PublicController::class,'index'])->name('home');
-Route::get('/revisor',[RevisorController::class,'index'] )->name('revisor.home');
 //Rutas para los Anuncios
 
 Route::get('/category/{name}/{id}/announcements', [PublicController::class,'announcementsByCategory'])->name('announcement.category');
@@ -43,3 +42,9 @@ Route::delete('/announcement/{announcement}', [AnnouncementController::class, 'd
 
 //POST
 Route::post('/announcement', [AnnouncementController::class,'store'])->name('announcement.store');
+
+
+//Revisor
+Route::get('/revisor',[RevisorController::class,'index'] )->name('revisor.home');
+Route::post('/revisor/announcement/{id}/accept', [RevisorController::class, 'accept'])->name('revisor.announcement.accept');
+Route::post('/revisor/announcement/{id}/reject',[RevisorController::class, 'reject'])->name('revisor.announcement.reject');

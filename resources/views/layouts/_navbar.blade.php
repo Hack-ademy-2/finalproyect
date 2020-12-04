@@ -26,7 +26,6 @@
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="#">Ver mis publicaciones</a>
                 </div>
-
                 @guest
                 @if (Route::has('login'))
             <li class="nav-item">
