@@ -56,12 +56,6 @@ class AnnouncementController extends Controller
 
    }
 
-   public function show()
-   {
-    
-
-   }
-
    public function edit()
    {
    

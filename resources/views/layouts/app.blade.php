@@ -17,7 +17,14 @@
   </head>
   <body>
     @include('layouts._navbar')
-    @yield('content')
+
+    <div class="container">
+     <div class="row">
+      <div class="col-12 mt-3 text-right px-3 pb-5 fixed-bottom"><a href="{{url()->previous()}}" class="btn btn-warning"><i class="fas fa-arrow-circle-left"></i></a></div>
+      <div class="col-12 mt-3 text-right px-3 pb-1 fixed-bottom"><a href="{{route('home')}}" class="btn btn-info"><i class="fas fa-home"></i></a></div>
+        @yield('content')
+     </div>
+    </div>
 
   </body>
 </html>

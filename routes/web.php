@@ -29,7 +29,7 @@ Route::get('/announcement', [AnnouncementController::class, 'index'])->name('ann
 
 Route::get('/announcement/create', [AnnouncementController::class, 'create'])->name('announcement.create');
 
-Route::get('/announcement/{announcement}', [AnnouncementController::class,'show'])->name('announcement.show');
+Route::get('/announcement/{id}', [PublicController::class,'show'])->name('announcement.show');
 
 Route::get('/announcement/{announcement}/edit', [AnnouncementController::class,'edit'])->name('announcement.edit');
 
