@@ -26,8 +26,8 @@ class PublicController extends Controller
    {
 
     $category = Category::all();
-    $announcements = Announcement::findOrFail($id);
+    $announcement = Announcement::findOrFail($id);
     
-    return view ('announcement.show',compact ('announcements','category'));
+    return view ('announcement.show',compact ('announcement','category'));
    }
 }

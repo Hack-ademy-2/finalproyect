@@ -1,16 +1,26 @@
 @extends('layouts.app')
 @section('content')
 
-    <div class="row">
-        <div class="jumbotron mt-5 py-4 d-flex flex-column justify-content-center">
-            <h1 class="display-4">{{$announcements->title}}</h1>
-            <img src="http://lorempixel.com/200/200" alt="{{$announcements->title}}">
-            <p class="lead mt-3"><strong class="mt-3"><a href="{{route('announcement.category',['name'=>$announcements->category->name,'id'=>$announcements->category->id])}}" class="text-decoration-none">{{$announcements->category->name}}</a></strong></p>
-            <p>{{$announcements->body}}</p>
-            <p class="mt-3 mb-0 text-right">Vendedor: <a href="#" class="text-decoration-none">{{$announcements->user->name}}</a></p>
-            <p class="mt-3 mb-0 font-italic text-right">Publicado el {{$announcements->created_at->format('d/m/Y')}}</p>
-            <a class="btn btn-primary btn-lg float-right mt-3" href="#" role="button">Comprar</a>
+<div class="row">
+    <div class="col-4 mt-3">
+        <div class="card mt-4" style="width: 21rem;">
+            <img src="http://lorempixel.com/200/200?a" class="card-img-top" alt="...">
+            <div class="card-body d-flex flex-column">
+                <h5 class="card-title font-weight-bold">{{$announcement->title}}</h5>
+                <p class="card-text">{{$announcement->body}}</p>
+                <strong class="my-3">Categoria: <a
+                        href="{{route('announcement.category',['name'=>$announcement->category->name,'id'=>$announcement->category->id])}}"
+                        class="text-decoration-none">{{$announcement->category->name}}</a></strong>
+                <a href="#" class="btn btn-info my-3">Comprar</a>
+                <a href="{{route('announcement.show',['id'=>$announcement->id])}}" class="btn btn-warning">Descubre
+                    más!</a>
+                <p class="mt-3 mb-0 text-right">Vendedor: <a href="#"
+                        class="text-decoration-none">{{$announcement->user->name}}</a></p>
+                <p class="mt-3 mb-0 font-italic text-right">Publicado el {{$announcement->created_at->format('d/m/Y')}}
+                </p>
+            </div>
         </div>
     </div>
+</div>
 
 @endsection

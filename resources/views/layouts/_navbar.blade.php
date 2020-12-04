@@ -16,12 +16,12 @@
                 </div>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button"
+                <a class="nav-link dropdown-toggle text-white mr-4" href="#" id="navbarDropdown" role="button"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Usuario
+                    Productos
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="{{route('announcement.create')}}">Subir Producto</a>
+                    <a class="dropdown-item" href="{{route('announcement.create')}}">Subir</a>
                     <a class="dropdown-item" href="{{route('home')}}">Comprar</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="#">Ver mis publicaciones</a>
