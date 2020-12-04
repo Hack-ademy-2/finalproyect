@@ -11,7 +11,7 @@
                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>Categories</a>
                 <div class="dropdown-menu dropdown-menu-right text-white" aria-labelledby="navbarDropdown">
                     @foreach($categories as $category)
-                        @include('announcement._announcement')
+                        @include('announcement._categorynav')
                     @endforeach
                 </div>
             </li>

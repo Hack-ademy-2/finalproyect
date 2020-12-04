@@ -43,6 +43,7 @@ class AnnouncementController extends Controller
       $a->title = $request->input('title');
       $a->body = $request->input('body');
       $a->category_id = $request->input('category');
+      $a->price = $request->input('price');
       $a->user_id = Auth::id();
       $a->save();
 

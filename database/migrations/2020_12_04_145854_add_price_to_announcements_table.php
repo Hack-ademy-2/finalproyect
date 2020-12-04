@@ -14,7 +14,7 @@ class AddPriceToAnnouncementsTable extends Migration
     public function up()
     {
         Schema::table('announcements', function (Blueprint $table) {
-            //
+            $table->decimal('price', 8, 2);
         });
     }
 
@@ -26,7 +26,7 @@ class AddPriceToAnnouncementsTable extends Migration
     public function down()
     {
         Schema::table('announcements', function (Blueprint $table) {
-            //
+            $table->dropColumn('price');
         });
     }
 }
