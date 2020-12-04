@@ -1,9 +1,11 @@
 
 @extends('layouts.app')
 @section('content')
+
 <div class='container'>
 @if($announcement)
-<div class='row my-4'>
+<div class='row my-4 mb-5'>
+
     <div class='col-12'>
         <div class="card">
             <div class="card-header">
@@ -44,9 +46,7 @@
                         <h3>Imagenes</h3>
                     </div>
                     <div class="col-md-9">
-                       @foreach ($announcement->images as $image)
-                           <img src="{{Storage::url($image->file)}}" alt="" class="img-fluid">
-                       @endforeach
+                        <img src="http://lorempixel.com/200/200?a" class="card-img-top" alt="...">
                     </div>
                 </div>
             </div>
@@ -63,7 +63,7 @@
     <div class="col-md-6 text-right">
         <form action="{{route('revisor.announcement.accept',['id'=>$announcement->id])}}" method="POST">
             @csrf
-            <button type="submit" class="btn btn-success">Acceptar</button>
+            <button type="submit" class="btn btn-success mb-5">Acceptar</button>
         </form>
     </div>
 </div>

@@ -32,6 +32,8 @@
                 <a class="nav-link text-white" href="{{route('login')}}">{{ __('Login') }}</a>
             </li>
             @endif
+            
+
 
             @if (Route::has('register'))
             <li class="nav-item">
@@ -57,6 +59,16 @@
                 </div>
             </li>
             @endguest
+            @if (Auth::user()->is_revisor)
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('revisor.home') }}">
+                    Revisor Casa
+                    <span class="badge badge-pill badge-warning">
+                    {{\App\Models\Announcement::ToBeRevisionedCount() }}
+                    </span>
+                    </a>
+                </li>
+            @endif
         </ul>
     </div>
 </nav>

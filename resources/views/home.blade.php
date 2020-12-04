@@ -1,6 +1,5 @@
 @extends('layouts.app')
 @section('content')
-
 <div class="row">
     <div class="col-12 mt-3 text-right px-3 pb-5 fixed-bottom"><a href="{{url()->previous()}}"
             class="btn btn-warning"><i class="fas fa-arrow-circle-left"></i></a></div>
@@ -21,7 +20,7 @@
         <div class="col-12 mt-5">
             <h2>No hay anuncios para mostrar! Regresa más tarde</h2>
         </div>
-    </div
+    </div>
 
     @endforelse
 

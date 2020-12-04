@@ -10,7 +10,10 @@ class PublicController extends Controller
 {
     public function index() {
 
-    $announcements = Announcement::orderBy('created_at','desc')->take(5)->get();
+        $announcements = Announcement::where('is_accepted', true)
+                        ->orderBy('created_at', 'desc')
+                        ->take(5)
+                        ->get();
     return view('home',compact('announcements'));
 } 
 
