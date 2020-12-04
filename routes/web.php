@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PublicController;
+use App\Http\Controllers\RevisorController;
 use App\Http\Controllers\AnnouncementController;
 
 /*
@@ -19,6 +20,7 @@ use App\Http\Controllers\AnnouncementController;
 //Route::get('/', [HomeController::class,'index'])->name('home');
 Route::get('/announcement/new', [HomeController::class,'newAnnouncement'])->name('announcement.new');
 Route::get('/', [PublicController::class,'index'])->name('home');
+Route::get('/revisor',[RevisorController::class,'index'] )->name('revisor.home');
 //Rutas para los Anuncios
 
 Route::get('/category/{name}/{id}/announcements', [PublicController::class,'announcementsByCategory'])->name('announcement.category');
