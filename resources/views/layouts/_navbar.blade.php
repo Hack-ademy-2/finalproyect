@@ -59,10 +59,13 @@
                 </div>
             </li>
             @endguest
-            @if (Auth::user()->is_revisor)
+
+            @if (App\Models\Announcement::ToBeRevisionedCount() == 0)
+            
+            @elseif (Auth::user()->is_revisor)
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('revisor.home') }}">
-                    Revisor Casa
+                    Revisor
                     <span class="badge badge-pill badge-warning">
                     {{\App\Models\Announcement::ToBeRevisionedCount() }}
                     </span>

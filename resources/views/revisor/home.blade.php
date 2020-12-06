@@ -45,7 +45,7 @@
                     <div class="col-md-3">
                         <h3>Imagenes</h3>
                     </div>
-                    <div class="col-md-9">
+                    <div class="col-md-3">
                         <img src="http://lorempixel.com/200/200?a" class="card-img-top" alt="...">
                     </div>
                 </div>
