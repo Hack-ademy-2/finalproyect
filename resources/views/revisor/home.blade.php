@@ -69,8 +69,8 @@
     </div>
     @else
     <div class="row">
-        <div class="col-12">
-            <h3>No hay ningun anuncio para revisar.</h3>
+        <div class="col-12 text-center mt-5">
+            <h3>{{ __('ui.revisorvacio') }}</h3>
         </div>
     </div>
     @endif

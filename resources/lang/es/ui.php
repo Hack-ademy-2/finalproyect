@@ -14,6 +14,18 @@ return [
     'titulo'=>'Titulo',
     'descripcion'=>'Descripción',
     'revisor'=>'Revisor',
-    'motores'=>'Motores',
+    'revisorvacio'=>'No hay anuncios por revisar!',
+    'registro'=>'Registrarse',
+    'registrarse'=>'Registrarse',
+    'nombre'=>'Nombre',
+    'correo'=>'Correo',
+    'contraseña'=>'Contraseña',
+    'confcontraseña'=>'Confirmar Contraseña',
+    'yaregistrado'=>'Ya estas registrado?',
+    'inicia'=>'Iniciar sesión',
+    'recordarme'=>'Recuerdame',
+    'passolvidada'=>'Has olvidado la contraseña?',
+    'salir'=>'Salir',
+
 
 ];

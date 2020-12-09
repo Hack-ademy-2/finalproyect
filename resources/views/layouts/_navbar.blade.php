@@ -35,7 +35,7 @@
                 @guest
                 @if (Route::has('login'))
             <li class="nav-item">
-                <a class="nav-link text-white" href="{{route('login')}}">{{ __('Login') }}</a>
+                <a class="nav-link text-white" href="{{route('login')}}">{{ __('ui.inicia') }}<!-- {{ __('Login') }} --></a>
             </li>
             @endif
 
@@ -43,7 +43,7 @@
 
             @if (Route::has('register'))
             <li class="nav-item">
-                <a class="nav-link text-white" href="{{route('register')}}">{{ __('Register') }}</a>
+                <a class="nav-link text-white" href="{{route('register')}}">{{ __('ui.registro') }}<!-- {{ __('Register') }} --></a>
             </li>
             @endif
             @else
@@ -56,7 +56,7 @@
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                           document.getElementById('logout-form').submit();">
-                        {{ __('Logout') }}
+                        {{ __('ui.salir') }}<!-- {{ __('Logout') }} -->
                     </a>
 
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">

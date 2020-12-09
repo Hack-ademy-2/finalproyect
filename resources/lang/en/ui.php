@@ -14,7 +14,21 @@ return [
     'titulo'=>'Title',
     'descripcion'=>'Description',
     'revisor'=>'Reviewer',
-    'motores'=>'Motors',
+    'revisorvacio'=>'There are no ads to review!',
+    'registro'=>'Register',
+    'registrarse'=>'Register',
+    'nombre'=>'Name',
+    'correo'=>'Email',
+    'contraseña'=>'Password',
+    'confcontraseña'=>'Confirm Password',
+    'yaregistrado'=>'Already register?',
+    'inicia'=>'Log In',
+    'recordarme'=>'Remember me',
+    'passolvidada'=>'Forgot your password?',
+    'salir'=>'Logout',
+
+
+    
 
 
 
