@@ -5,13 +5,21 @@
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
+    <div>
+    </div>
     <div class="collapse navbar-collapse align-content-center justify-content-end" id="navbarSupportedContent">
         <ul class="navbar-nav">
+
+            @include('layouts._locale',["lang"=>'es','nation'=>'es'])
+            @include('layouts._locale',["lang"=>'en','nation'=>'gb'])
+            @include('layouts._locale',["lang"=>'it','nation'=>'it'])
+
             <li class="nav-item dropdown">
-                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>Categories</a>
+                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false" v-pre>Categories</a>
                 <div class="dropdown-menu dropdown-menu-right text-white" aria-labelledby="navbarDropdown">
                     @foreach($categories as $category)
-                        @include('announcement._categorynav')
+                    @include('announcement._categorynav')
                     @endforeach
                 </div>
             </li>
@@ -32,7 +40,7 @@
                 <a class="nav-link text-white" href="{{route('login')}}">{{ __('Login') }}</a>
             </li>
             @endif
-            
+
 
 
             @if (Route::has('register'))
@@ -59,17 +67,17 @@
                 </div>
             </li>
             @if (Auth::user()->is_revisor)
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('revisor.home') }}">
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('revisor.home') }}">
                     Revisor Casa
                     <span class="badge badge-pill badge-warning">
-                    {{\App\Models\Announcement::ToBeRevisionedCount() }}
+                        {{\App\Models\Announcement::ToBeRevisionedCount() }}
                     </span>
-                    </a>
-                </li>
+                </a>
+            </li>
             @endif
             @endguest
-            
+
         </ul>
     </div>
 </nav>
