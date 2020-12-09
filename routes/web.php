@@ -42,7 +42,7 @@ Route::delete('/announcement/{announcement}', [AnnouncementController::class, 'd
 
 //POST
 Route::post('/announcement', [AnnouncementController::class,'store'])->name('announcement.store');
-
+Route::post('/locale/{locale}', [PublicController::class,'locale'])->name('locale');
 
 //Revisor
 Route::get('/revisor',[RevisorController::class,'index'] )->name('revisor.home');

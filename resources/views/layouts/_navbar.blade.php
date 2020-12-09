@@ -5,26 +5,32 @@
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
+    <div>
+    </div>
     <div class="collapse navbar-collapse align-content-center justify-content-end" id="navbarSupportedContent">
         <ul class="navbar-nav">
+
+            @include('layouts._locale',["lang"=>'es','nation'=>'es'])
+            @include('layouts._locale',["lang"=>'en','nation'=>'gb'])
+            @include('layouts._locale',["lang"=>'it','nation'=>'it'])
+
             <li class="nav-item dropdown">
-                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>Categories</a>
+                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false" v-pre>{{ __('ui.categorias') }}</a>
                 <div class="dropdown-menu dropdown-menu-right text-white" aria-labelledby="navbarDropdown">
                     @foreach($categories as $category)
-                        @include('announcement._categorynav')
+                    @include('announcement._categorynav')
                     @endforeach
                 </div>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle text-white mr-4" href="#" id="navbarDropdown" role="button"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Productos
+                    {{ __('ui.productos') }}
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="{{route('announcement.create')}}">Subir</a>
-                    <a class="dropdown-item" href="{{route('home')}}">Comprar</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Ver mis publicaciones</a>
+                    <a class="dropdown-item" href="{{route('announcement.create')}}">{{ __('ui.subir') }}</a>
+                    <a class="dropdown-item" href="{{route('home')}}">{{ __('ui.comprar') }}</a>
                 </div>
                 @guest
                 @if (Route::has('login'))
@@ -32,7 +38,7 @@
                 <a class="nav-link text-white" href="{{route('login')}}">{{ __('Login') }}</a>
             </li>
             @endif
-            
+
 
 
             @if (Route::has('register'))
@@ -59,17 +65,25 @@
                 </div>
             </li>
             @if (Auth::user()->is_revisor)
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('revisor.home') }}">
-                    Revisor Casa
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('revisor.home') }}">
+                {{ __('ui.revisor') }}
                     <span class="badge badge-pill badge-warning">
-                    {{\App\Models\Announcement::ToBeRevisionedCount() }}
+                        {{\App\Models\Announcement::ToBeRevisionedCount() }}
                     </span>
+<<<<<<< HEAD
                     </a>
                 </li>
                     
             @endif
             @endguest
+=======
+                </a>
+            </li>
+            @endif
+            @endguest
+
+>>>>>>> db2c2c5ed6fd35bae420a1b5163d858b13210a86
         </ul>
     </div>
 </nav>
