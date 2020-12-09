@@ -8,7 +8,7 @@
                 <form method="POST" action="{{route('announcement.store')}}">
                     @csrf
                     <div class="form-group">
-                        <label for="categories">Categorias</label>
+                        <label for="categories">{{ __('ui.categoria') }}</label>
                         <select class="form-control" id="categories" name="category">
                             @foreach ($categories as $category)
                             <option value="{{$category->id}}" {{old('category') == $category->id ? 'selected' : ''}}>
@@ -17,7 +17,7 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="announcementeName">Titulo</label>
+                        <label for="announcementeName">{{ __('ui.titulo') }}</label>
                         <input type="text" class="form-control" id="announcementeName" aria-describedby="nameHelp"
                             name="title" value="{{old("title")}}">
                         @error('title')
@@ -27,7 +27,7 @@
                         @enderror
                     </div>
                     <div class="form-group">
-                        <label for="announcementeName">Precio</label>
+                        <label for="announcementeName">{{ __('ui.precio') }}</label>
                         <input type="number" min="1.00" step="0.01" class="form-control" id="announcementePrice" aria-describedby="priceHelp"
                             name="price" value="{{old("price")}}">
                         @error('price')
@@ -37,7 +37,7 @@
                         @enderror
                     </div>
                     <div class="form-group">
-                        <label for="announcementeBody">Anuncio</label>
+                        <label for="announcementeBody">{{ __('ui.descripcion') }}</label>
                         <textarea class="form-control" name="body" id="announcementeBody" cols="30"
                             rows="5">{{old("body")}}</textarea>
                         @error('body')
@@ -46,7 +46,7 @@
                         </small>
                         @enderror
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-primary">{{ __('ui.subir') }}</button>
                 </form>
             </div>
         </div>

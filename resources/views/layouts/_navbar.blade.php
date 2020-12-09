@@ -16,7 +16,7 @@
 
             <li class="nav-item dropdown">
                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false" v-pre>Categories</a>
+                    aria-haspopup="true" aria-expanded="false" v-pre>{{ __('ui.categorias') }}</a>
                 <div class="dropdown-menu dropdown-menu-right text-white" aria-labelledby="navbarDropdown">
                     @foreach($categories as $category)
                     @include('announcement._categorynav')
@@ -26,13 +26,11 @@
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle text-white mr-4" href="#" id="navbarDropdown" role="button"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Productos
+                    {{ __('ui.productos') }}
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="{{route('announcement.create')}}">Subir</a>
-                    <a class="dropdown-item" href="{{route('home')}}">Comprar</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Ver mis publicaciones</a>
+                    <a class="dropdown-item" href="{{route('announcement.create')}}">{{ __('ui.subir') }}</a>
+                    <a class="dropdown-item" href="{{route('home')}}">{{ __('ui.comprar') }}</a>
                 </div>
                 @guest
                 @if (Route::has('login'))
@@ -69,7 +67,7 @@
             @if (Auth::user()->is_revisor)
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('revisor.home') }}">
-                    Revisor Casa
+                {{ __('ui.revisor') }}
                     <span class="badge badge-pill badge-warning">
                         {{\App\Models\Announcement::ToBeRevisionedCount() }}
                     </span>
