@@ -58,7 +58,6 @@
                     </form>
                 </div>
             </li>
-            @endguest
             @if (Auth::user()->is_revisor)
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('revisor.home') }}">
@@ -68,7 +67,9 @@
                     </span>
                     </a>
                 </li>
+                    
             @endif
+            @endguest
         </ul>
     </div>
 </nav>
