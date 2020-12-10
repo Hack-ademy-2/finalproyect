@@ -71,14 +71,9 @@
                     <span class="badge badge-pill badge-warning">
                         {{\App\Models\Announcement::ToBeRevisionedCount() }}
                     </span>
-<<<<<<< HEAD
                     </a>
                 </li>
                     
-=======
-                </a>
-            </li>
->>>>>>> 3093c695475e43f9da08a43d8a213f2d1af09398
             @endif
             @endguest
         </ul>
