@@ -21,7 +21,6 @@
     @include('layouts._navbar')
 
     <div class="container">
-        <div class="row d-flex justify-content-around mx-0" >
 
             @if(session('access.denied.revisor.only'))
             <div class="col-12 alert alert-danger mt-3 text-center">{{session('access.denied.revisor.only')}}</div>
@@ -34,7 +33,6 @@
             </div> --}}
 
             @yield('content')
-        </div>
     </div>
 
 </body>
