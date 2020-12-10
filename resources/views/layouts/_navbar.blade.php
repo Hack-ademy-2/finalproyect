@@ -34,12 +34,6 @@
                 </div>
                 @guest
                 @if (Route::has('login'))
-<<<<<<< HEAD
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="{{route('login')}}">{{ __('Login') }}</a>
-                    </li>
-                @endif
-=======
             <li class="nav-item">
                 <a class="nav-link text-white" href="{{route('login')}}">{{ __('ui.inicia') }}<!-- {{ __('Login') }} --></a>
             </li>
@@ -47,7 +41,6 @@
 
 
 
->>>>>>> 72bd1296a963cf255337652e440bf4a525d9a0b0
             @if (Route::has('register'))
             <li class="nav-item">
                 <a class="nav-link text-white" href="{{route('register')}}">{{ __('ui.registro') }}<!-- {{ __('Register') }} --></a>

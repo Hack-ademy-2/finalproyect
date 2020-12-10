@@ -1,12 +1,12 @@
 @extends('layouts.app')
 @section('content')
 <div class="container mt-5">
-<div class="row justify-content-center">
-    <div class="col-md-8">
-        <div class="card">
-            <div class="card-header">
-                <form method="POST" action="{{route('announcement.store')}}">
-                    @csrf
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    <form method="POST" action="{{route('announcement.store')}}">
+                        @csrf
                     <div class="form-group">
                         <label for="categories">{{ __('ui.categoria') }}</label>
                         <select class="form-control" id="categories" name="category">
@@ -44,6 +44,15 @@
                         <small id="emailHelp" class="form-text" style="color:red;">
                             {{ $message }}
                         </small>
+                        @enderror
+                    </div>
+                    <div class="form-group">
+                        <label for="images" class="col-md-12 col-form-label">{{ __('ui.imagenesForm') }}</label>
+                        <div class="dropzone" id="drophere"></div>
+                        @error('images')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{$message}}</strong>
+                            </span>
                         @enderror
                     </div>
                     <button type="submit" class="btn btn-primary">{{ __('ui.subir') }}</button>

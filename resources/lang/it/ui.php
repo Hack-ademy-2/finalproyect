@@ -14,10 +14,6 @@ return [
     'titulo'=>'Titolo',
     'descripcion'=>'Descrizione',
     'revisor'=>'Recensore',
-<<<<<<< HEAD
-    'titulo_categoria' => 'Annunci per categoria',
-    'sin_productos' => 'Nessun annuncio da visualizzare! Torna più tardi',
-=======
     'revisorvacio'=>'Non ci sono annunci da rivedere!',
     'registro'=>'Registrati',
     'registrarse'=>'Registrare',
@@ -36,7 +32,6 @@ return [
 
 
 
->>>>>>> 72bd1296a963cf255337652e440bf4a525d9a0b0
 
 
 ];

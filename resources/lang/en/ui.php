@@ -14,12 +14,6 @@ return [
     'titulo'=>'Title',
     'descripcion'=>'Description',
     'revisor'=>'Reviewer',
-<<<<<<< HEAD
-    'motores'=>'Motors',
-    'titulo_categoria' => 'Ads by category',
-    'sin_productos' => 'No ads to display! Come back later',
-    
-=======
     'revisorvacio'=>'There are no ads to review!',
     'registro'=>'Register',
     'registrarse'=>'Register',
@@ -41,5 +35,4 @@ return [
 
 
 
->>>>>>> 72bd1296a963cf255337652e440bf4a525d9a0b0
 ];

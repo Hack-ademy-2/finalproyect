@@ -14,11 +14,6 @@ return [
     'titulo'=>'Titulo',
     'descripcion'=>'Descripción',
     'revisor'=>'Revisor',
-<<<<<<< HEAD
-    'motores'=>'Motores',
-    'titulo_categoria' => 'Anuncios según su categoría',
-    'sin_productos' => 'No hay anuncios para mostrar! Regresa más tarde',
-=======
     'revisorvacio'=>'No hay anuncios por revisar!',
     'registro'=>'Registrarse',
     'registrarse'=>'Registrarse',
@@ -33,6 +28,5 @@ return [
     'salir'=>'Salir',
     'noregistrado'=>'Aún no te registras?',
 
->>>>>>> 72bd1296a963cf255337652e440bf4a525d9a0b0
 
 ];

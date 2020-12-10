@@ -18,7 +18,7 @@ use App\Http\Controllers\AnnouncementController;
 */
 
 //Route::get('/', [HomeController::class,'index'])->name('home');
-Route::get('/announcement/new', [HomeController::class,'newAnnouncement'])->name('announcement.new');
+Route::get('/announcement/create', [HomeController::class,'newAnnouncement'])->name('announcement.new');
 Route::get('/', [PublicController::class,'index'])->name('home');
 //Rutas para los Anuncios
 
@@ -33,6 +33,8 @@ Route::get('/announcement/create', [AnnouncementController::class, 'create'])->n
 Route::get('/announcement/{id}/details', [PublicController::class,'show'])->name('announcement.show');
 
 Route::get('/announcement/{announcement}/edit', [AnnouncementController::class,'edit'])->name('announcement.edit');
+
+Route::post('/announcement/images/upload', [AnnouncementController::class,'uploadImages'])->name('announcement.images.upload');
 
 //MATCH
 Route::match(['put','patch'], '/announcement/{announcement}', [AnnouncementController::class, 'update'])->name('announcement.update');
