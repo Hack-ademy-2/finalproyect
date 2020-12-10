@@ -4,7 +4,7 @@ return [
     'comprar'=>'Buy',
     'subir'=>'Upload',
     'productos'=>'Products',
-    'sinanuncios'=>'No hay anuncios para mostrar! Come back later',
+    'sinanuncios'=>'There is no ads to show! Come back later',
     'categoria'=>'Category',
     'categorias'=>'Categories',
     'precio'=>'Price',
@@ -26,6 +26,8 @@ return [
     'recordarme'=>'Remember me',
     'passolvidada'=>'Forgot your password?',
     'salir'=>'Logout',
+    'noregistrado'=>'Still not register?',
+
 
 
     

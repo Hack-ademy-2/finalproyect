@@ -26,6 +26,7 @@ return [
     'recordarme'=>'Recuerdame',
     'passolvidada'=>'Has olvidado la contraseña?',
     'salir'=>'Salir',
+    'noregistrado'=>'Aún no te registras?',
 
 
 ];

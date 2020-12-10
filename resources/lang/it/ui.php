@@ -26,6 +26,8 @@ return [
     'recordarme'=>'Ricordami',
     'passolvidada'=>'Password dimenticata?',
     'salir'=>'Disconnettersi',
+    'noregistrado'=>'Non sei ancora registrato?',
+
 
 
 

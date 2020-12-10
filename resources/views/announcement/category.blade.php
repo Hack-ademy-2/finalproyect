@@ -16,6 +16,7 @@
                         href="{{route('announcement.category',['name'=>$announcement->category->name,'id'=>$announcement->category->id])}}"
                         class="text-decoration-none">{{$announcement->category->name}}</a></strong>
                 <a href="#" class="btn btn-info my-3">Comprar</a>
+                <a href="{{route('announcement.show',['id'=>$announcement->id])}}" class="btn btn-warning">{{ __('ui.descubre') }}</a>
                 <p class="mt-3 mb-0 text-right">Vendedor: <a href="#"
                         class="text-decoration-none">{{$announcement->user->name}}</a></p>
                 <p class="mt-3 mb-0 font-italic text-right">Publicado el
