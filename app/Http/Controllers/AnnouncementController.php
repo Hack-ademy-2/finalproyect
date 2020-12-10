@@ -55,20 +55,21 @@ class AnnouncementController extends Controller
       $a->save();
 
       $uniqueSecret = $request->input('uniqueSecret');
-      /* $images = session()->get("images.{$uniqueSecret}",[]); */
-
-
+      $images = session()->get("images.{$uniqueSecret}",[]);
 
       foreach($images as $image){
+
          $i = new AnnouncementImage;
+
          $fileName = basename($image);
-         $newFilePath = "public/announcements/{$a->id}/{$fileName}";
-         Storage::move($image,$newFilePath);
+         $newFilePath = "/public/announcements/{$a->id}/{$fileName}";
+         $file = Storage::move($image,$newFilePath);
          $i->file = $newFilePath;
          $i->announcement_id = $a->id;
          $i->save();
       }
-      File::deleteDirectory(storage_path("/app/public/storage/temp/{$uniqueSecret}"));
+      
+      File::deleteDirectory(storage_path("/app/public/temp/{$uniqueSecret}"));
 
       return redirect()->route('home')->with('announcement.create.success','Anuncio creado con exito');
 

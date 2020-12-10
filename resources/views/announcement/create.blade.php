@@ -50,7 +50,7 @@
                         @enderror
                     </div>
                     <div class="form-group">
-                        <label for="announcementImages">{{ __('ui.imagenesForm') }}</label>
+                        <label for="announcementImages">{{ __('ui.imagenesform') }}</label>
                         <div class="dropzone" id="drophere"></div>
                         @error('images')
                             <span class="invalid-feedback" role="alert">

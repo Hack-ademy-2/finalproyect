@@ -27,6 +27,8 @@ return [
     'passolvidada'=>'Has olvidado la contraseña?',
     'salir'=>'Salir',
     'noregistrado'=>'Aún no te registras?',
+    'imagenesform'=>'Imágenes',
+
 
 
 ];

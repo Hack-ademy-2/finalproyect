@@ -27,6 +27,7 @@ return [
     'passolvidada'=>'Forgot your password?',
     'salir'=>'Logout',
     'noregistrado'=>'Still not register?',
+    'imagenesform'=>'Images',
 
 
 
