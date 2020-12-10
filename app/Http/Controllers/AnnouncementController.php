@@ -37,7 +37,8 @@ class AnnouncementController extends Controller
       $uniqueSecret = base_convert(sha1(uniqid(mt_rand())), 16, 36);
 
       return view('announcement.create', compact('categories', 'uniqueSecret'));
-       
+  
+      
    }
 
    public function store(AnnouncementRequest $request)
