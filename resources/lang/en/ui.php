@@ -15,8 +15,7 @@ return [
     'descripcion'=>'Description',
     'revisor'=>'Reviewer',
     'motores'=>'Motors',
-
-
-
-
+    'titulo_categoria' => 'Ads by category',
+    'sin_productos' => 'No ads to display! Come back later',
+    
 ];

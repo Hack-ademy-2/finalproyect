@@ -3,7 +3,7 @@
 
 <div class="row">
     <div class="col-12 mt-5 text-center">
-        <h1>Anuncios según su categoría: {{$category->name}}</h1>
+        <h1>{{ __('ui.titulo_categoria')}}: {{$category->name}}</h1>
     </div>
     @forelse ($announcements as $announcement)
     <div class="col-4 mt-3">
@@ -27,7 +27,7 @@
     @empty
     <div class="row">
         <div class="col-12 mt-5">
-            <h2>No hay anuncios para mostrar! Regresa más tarde</h2>
+            <h2>{{__('ui.sin_productos')}}</h2>
         </div>
     </div>
 

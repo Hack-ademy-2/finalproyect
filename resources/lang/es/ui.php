@@ -15,5 +15,7 @@ return [
     'descripcion'=>'Descripción',
     'revisor'=>'Revisor',
     'motores'=>'Motores',
+    'titulo_categoria' => 'Anuncios según su categoría',
+    'sin_productos' => 'No hay anuncios para mostrar! Regresa más tarde',
 
 ];

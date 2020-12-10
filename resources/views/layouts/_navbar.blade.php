@@ -34,13 +34,10 @@
                 </div>
                 @guest
                 @if (Route::has('login'))
-            <li class="nav-item">
-                <a class="nav-link text-white" href="{{route('login')}}">{{ __('Login') }}</a>
-            </li>
-            @endif
-
-
-
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="{{route('login')}}">{{ __('Login') }}</a>
+                    </li>
+                @endif
             @if (Route::has('register'))
             <li class="nav-item">
                 <a class="nav-link text-white" href="{{route('register')}}">{{ __('Register') }}</a>
@@ -71,19 +68,10 @@
                     <span class="badge badge-pill badge-warning">
                         {{\App\Models\Announcement::ToBeRevisionedCount() }}
                     </span>
-<<<<<<< HEAD
-                    </a>
-                </li>
-                    
-            @endif
-            @endguest
-=======
                 </a>
             </li>
             @endif
             @endguest
-
->>>>>>> db2c2c5ed6fd35bae420a1b5163d858b13210a86
         </ul>
     </div>
 </nav>

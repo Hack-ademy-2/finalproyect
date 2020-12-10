@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
 
 
-    <title>Mi wallapop</title>
+    <title>Mi AulaPOP</title>
 </head>
 
 <body>

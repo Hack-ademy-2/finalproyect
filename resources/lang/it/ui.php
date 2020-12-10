@@ -14,6 +14,8 @@ return [
     'titulo'=>'Titolo',
     'descripcion'=>'Descrizione',
     'revisor'=>'Recensore',
+    'titulo_categoria' => 'Annunci per categoria',
+    'sin_productos' => 'Nessun annuncio da visualizzare! Torna più tardi',
 
 
 ];
