@@ -1,4 +1,3 @@
-
 $(function(){
     // document ready !! 
     if ($('#drophere').length > 0 ) {

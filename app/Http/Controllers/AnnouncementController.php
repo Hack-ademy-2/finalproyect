@@ -34,7 +34,7 @@ class AnnouncementController extends Controller
    {
       
       $categories = Category::all();
-      $uniqueSecret = base_convert(sha1(uniqid(mt_rand())), 16, 36);
+      $uniqueSecret = base_convert(sha1(uniqid(mt_rand())),16,36);
 
       return view('announcement.create', compact('categories', 'uniqueSecret'));
   
@@ -53,8 +53,9 @@ class AnnouncementController extends Controller
       $a->price = $request->input('price');
       $a->user_id = Auth::id();
       $a->save();
+
       $uniqueSecret = $request->input('uniqueSecret');
-      $images = session()->get("images.{$uniqueSecret}",[]);
+      /* $images = session()->get("images.{$uniqueSecret}",[]); */
 
 
 
@@ -100,12 +101,12 @@ class AnnouncementController extends Controller
    
    public function uploadImages(Request $request)
    {
-      $uniqueSecret = $request->input('uniqueScretet');
+      $uniqueSecret = $request->input('uniqueSecret');
 
-      $fileName = $request->file('file')->store('public/temp/{$uniqueSecret}');
+      $fileName = $request->file('file')->store("public/temp/{$uniqueSecret}");
       session()->push("images.{$uniqueSecret}", $fileName);
       return response()->json(
-         session()->get("images.{$uniqueSecret}")
+         session("images.{$uniqueSecret}")
       );
    }
    

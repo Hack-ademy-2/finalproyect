@@ -5,8 +5,11 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">
+                Nuevo Anuncio (secret: {{$uniqueSecret}})
+                <div class="card-body">
                     <form method="POST" action="{{route('announcement.store')}}">
                         @csrf
+                    <input type="hidden" name="uniqueSecret" value="{{$uniqueSecret}}">
                     <div class="form-group">
                         <label for="categories">{{ __('ui.categoria') }}</label>
                         <select class="form-control" id="categories" name="category">
@@ -47,7 +50,7 @@
                         @enderror
                     </div>
                     <div class="form-group">
-                        <label for="images" class="col-md-12 col-form-label">{{ __('ui.imagenesForm') }}</label>
+                        <label for="announcementImages">{{ __('ui.imagenesForm') }}</label>
                         <div class="dropzone" id="drophere"></div>
                         @error('images')
                             <span class="invalid-feedback" role="alert">
@@ -57,6 +60,7 @@
                     </div>
                     <button type="submit" class="btn btn-primary">{{ __('ui.subir') }}</button>
                 </form>
+            </div>
             </div>
         </div>
     </div>

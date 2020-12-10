@@ -21,6 +21,5 @@ class HomeController extends Controller
         
         return view('home', compact ('announcements','categories'));
     }
-    
 
 }
