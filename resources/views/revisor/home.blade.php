@@ -45,9 +45,10 @@
                         <div class="col-md-3">
                             <h3>Imagenes</h3>
                         </div>
-                        <div class="col-md-3">
-                            <img src="http://lorempixel.com/200/200?a" class="card-img-top" alt="...">
-                        </div>
+                            @foreach ($announcement->images as $image)
+
+                                <img src="{{Storage::url($image->file)}}" class="d-block w-100" alt="...">
+                            @endforeach
                     </div>
                 </div>
             </div>
