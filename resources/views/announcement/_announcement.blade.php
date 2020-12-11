@@ -1,6 +1,8 @@
 <div class="col-4 mt-3 px-0">
     <div class="card mt-4 mb-5" style="width: 18rem;">
-        <img src="http://lorempixel.com/200/200?a" class="card-img-top" alt="...">
+        <div>
+            @include ('announcement._announcement_carousel')
+        </div>
         <div class="card-body d-flex flex-column">
             <h5 class="card-title font-weight-bold">{{$announcement->title}}</h5>
             <p class="card-text">{{$announcement->body}}</p>
@@ -19,4 +21,3 @@
         </div>
     </div>
 </div>
-
