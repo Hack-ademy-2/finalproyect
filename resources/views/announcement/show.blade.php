@@ -5,6 +5,13 @@
     <h1 class="display-4">{{$announcement->title}}</h1>
     <p class="lead">{{ __('ui.precio') }}: {{$announcement->price}}€</p>
     <hr class="my-4">
+    <div class="carousel-inner">
+        @foreach ($announcement->images as $image)
+        <div class="carousel-item active">
+            <img src="{{Storage::url($image->file)}}" class="d-block w-100" alt="...">
+        </div>
+        @endforeach
+    </div>
     <p class="card-text">{{$announcement->body}}</p><strong class="my-3"> {{ __('ui.categoria') }} <a href="{{route('announcement.category',['name'=>$announcement->category->name,'id'=>$announcement->category->id])}}" class="text-decoration-none">{{$announcement->category->name}}</a></strong>
     <a href="#" class="btn btn-info my-3">{{ __('ui.comprar') }}</a>
     <a href="{{route('announcement.category',['name'=>$announcement->category->name,'id'=>$announcement->category->id])}}" class="btn btn-warning">Comparar con otros: {{$announcement->category->name}}</a>

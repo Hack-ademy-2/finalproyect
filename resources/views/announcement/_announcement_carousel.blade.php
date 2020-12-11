@@ -1,8 +1,8 @@
 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
         @foreach ($announcement->images as $image)
-        <div class="carousel-item active">
-            <img src="{{Storage::url($image->file)}}" class="d-block w-100" alt="...">
+        <div class="carousel-item @if ($loop->first)active @endif">
+            <img src="{{$image->getUrl(300, 150)}}" class="d-block w-100" alt="...">
         </div>
         @endforeach
     </div>

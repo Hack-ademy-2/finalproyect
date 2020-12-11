@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
 use App\Http\Requests\AnnouncementRequest;
+use App\Jobs\ResizeImage;
 
 class AnnouncementController extends Controller
 {
@@ -66,10 +67,16 @@ class AnnouncementController extends Controller
          $i = new AnnouncementImage;
 
          $fileName = basename($image);
-         $newFileName = "public/announcements/{$a->id}/{$fileName}";
-         $file = Storage::move($image,$newFileName);
+         $newFilePath = "public/announcements/{$a->id}/{$fileName}";
+         $file = Storage::move($image,$newFilePath);
 
-         $i->file = $newFileName;
+         dispatch(new ResizeImage(
+            $newFilePath,
+            300,
+            150
+         ));
+
+         $i->file = $newFilePath;
          $i->announcement_id = $a->id;
          $i->save();
       }
@@ -81,7 +88,7 @@ class AnnouncementController extends Controller
       
 
       //Llamada de golpe
-//$announcement = Announcement::create(request()->all());
+      //$announcement = Announcement::create(request()->all());
       //return redirect()->route('announcement.create');
 
 
@@ -109,12 +116,18 @@ class AnnouncementController extends Controller
    {
       $uniqueSecret = $request->input('uniqueSecret');
 
-      $fileName = $request->file('file')->store("public/temp/{$uniqueSecret}");
-      session()->push("images.{$uniqueSecret}", $fileName);
+      $FilePath = $request->file('file')->store("public/temp/{$uniqueSecret}");
+
+      dispatch(new ResizeImage($FilePath, 120, 120));
+
+
+
+
+      session()->push("images.{$uniqueSecret}", $FilePath);
       return response()->json(
          
          [
-            'id'=>$fileName
+            'id'=>$FilePath
          ]
       );
    }
@@ -133,14 +146,15 @@ class AnnouncementController extends Controller
      $uniqueSecret = $request->input('uniqueSecret');
      $images = session()->get("images.{$uniqueSecret}",[]);
      $removedImages = session()->get("removedImages.{$uniqueSecret}",[]);
-
      $images = array_diff($images, $removedImages);
+
+     $data = [];
 
      foreach($images as $image){
         $data[] = [
            'id' => $image,
-           'name' => basename ($image),
-           'src' => Storage::url($image),
+           'src' => AnnouncementImage::getUrlByFilePath($image, 120, 120),
+           'name' => basename($image),
            'size' => Storage::size($image)
         ];
      }
