@@ -66,7 +66,7 @@ class AnnouncementController extends Controller
          $i = new AnnouncementImage;
 
          $fileName = basename($image);
-         $newFileName = "/public/announcements/{$a->id}/{$fileName}";
+         $newFileName = "public/announcements/{$a->id}/{$fileName}";
          $file = Storage::move($image,$newFileName);
 
          $i->file = $newFileName;

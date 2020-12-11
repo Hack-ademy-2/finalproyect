@@ -46,7 +46,9 @@
                             <h3>Imagenes</h3>
                         </div>
                         <div class="col-md-3">
-                            <img src="http://lorempixel.com/200/200?a" class="card-img-top" alt="...">
+                        @foreach ($announcement->images as $image)
+                            <img src="{{Storage::url($image->file)}}" class="card-img-top" alt="..." class="img-fluid">
+                        @endforeach
                         </div>
                     </div>
                 </div>
