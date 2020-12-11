@@ -40802,6 +40802,29 @@ $(function () {
       params: {
         _token: csrfToken,
         uniqueSecret: uniqueSecret
+      },
+      addRemoveLinks: true,
+      init: function init() {
+        $.ajax({
+          type: 'GET',
+          url: '/announcement/images',
+          data: {
+            uniqueSecret: uniqueSecret
+          },
+          dataType: 'json'
+        }).done(function (data) {
+          $.each(data, function (key, value) {
+            var file = {
+              serverId: value.id,
+              name: value.name,
+              size: value.size
+            };
+            myDropzone.options.addedfile.call(myDropzone, file);
+            myDropzone.options.thumbnail.call(myDropzone, file, value.src);
+            myDropzone.options.success.call(myDropzone, file);
+            myDropzone.options.complete.call(myDropzone, file);
+          });
+        });
       }
     });
   }

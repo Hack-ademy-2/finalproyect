@@ -34,17 +34,19 @@ Route::get('/announcement/{id}/details', [PublicController::class,'show'])->name
 
 Route::get('/announcement/{announcement}/edit', [AnnouncementController::class,'edit'])->name('announcement.edit');
 
-Route::post('/announcement/images/upload', [AnnouncementController::class,'uploadImages'])->name('announcement.images.upload');
+Route::get('/announcement/images', [AnnouncementController::class, 'getImages'])->name('announcement.images');
 
 //MATCH
 Route::match(['put','patch'], '/announcement/{announcement}', [AnnouncementController::class, 'update'])->name('announcement.update');
 
 //DELETE
 Route::delete('/announcement/{announcement}', [AnnouncementController::class, 'destroy'])->name('announcement.destroy');
+Route::delete('/announcement/images/remove', [AnnouncementController::class, 'removeImages'])->name('announcement.images.remove');
 
 //POST
 Route::post('/announcement', [AnnouncementController::class,'store'])->name('announcement.store');
 Route::post('/locale/{locale}', [PublicController::class,'locale'])->name('locale');
+Route::post('/announcement/images/upload', [AnnouncementController::class,'uploadImages'])->name('announcement.images.upload');
 
 //Revisor
 Route::get('/revisor',[RevisorController::class,'index'] )->name('revisor.home');

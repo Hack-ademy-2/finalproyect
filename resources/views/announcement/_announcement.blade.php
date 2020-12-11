@@ -1,4 +1,4 @@
-<div class="col-3 mt-3 px-0">
+<div class="col-4 mt-3 px-0">
     <div class="card mt-4 mb-5" style="width: 18rem;">
         <img src="http://lorempixel.com/200/200?a" class="card-img-top" alt="...">
         <div class="card-body d-flex flex-column">
