@@ -1,4 +1,4 @@
-<div class="col-4 mt-3 px-0 d-flex justify-content-center">
+<div class="col-12 col-sm-5 col-md-6 col-lg-4 mt-3 px-0 d-flex justify-content-center">
     <div class="card mt-4 mb-5" style="width: 18rem;">
         <div>
             @include ('announcement._announcement_carousel')
@@ -14,7 +14,7 @@
             <a href="{{route('announcement.show',['id'=>$announcement->id])}}"
                 class="btn btn-warning" style="z-index: 1">{{ __('ui.descubre') }}</a>
             <p class="mt-3 mb-0 text-right">{{ __('ui.vendedor') }}: <a href="#"
-                    class="text-decoration-none">{{$announcement->user->name}}</a></p>
+                    class="text-decoration-none" style="z-index: 1">{{$announcement->user->name}}</a></p>
             <p class="mt-3 mb-0 font-italic text-right">{{ __('ui.publicado') }}
                 {{$announcement->created_at->format('d/m/Y')}}
             </p>
