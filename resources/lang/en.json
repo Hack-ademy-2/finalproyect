@@ -1,0 +1,10 @@
+{
+    "Motores": "Car",
+    "Electrodomésticos":"Home appliances",
+    "Libros":"Book",
+    "Juegos": "Game",
+    "Deporte": "Sport",
+    "Ocio" : "Leisure",
+    "Móviles": "Phone",
+    "Mobiliario": "Furniture"
+}

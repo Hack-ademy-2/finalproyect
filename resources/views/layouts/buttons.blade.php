@@ -1,8 +1,8 @@
-<div class="d-none d-lg-block">
-    <div class="mt-3 mb-1 text-right px-3 pb-5 fixed-bottom"><a href="{{url()->previous()}}" class="btn btn-warning"
-            style="width:53px"><i class="fas fa-arrow-circle-left"></i></a>
+<div class="d-none d-lg-block d-flex justify-content-end">
+    <div class="mt-3 mb-1 text-right px-3 pb-5 fixed-bottom d-flex justify-content-end"><a href="{{url()->previous()}}" class="btn btn-warning"
+            style="width:53px; "><i class="fas fa-arrow-circle-left"></i></a>
     </div>
-    <div style="z-index: 0" class="mt-3 mb-1 text-right px-3 pb-1 fixed-bottom"><a href="{{route('home')}}"
+    <div class="mt-3 mb-1 text-right px-3 pb-1 fixed-bottom d-flex justify-content-end"><a href="{{route('home')}}"
             class="btn btn-info" style="width:53px"><i class="fas fa-home"></i></a>
     </div>
 </div>
