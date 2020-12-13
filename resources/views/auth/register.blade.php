@@ -2,9 +2,10 @@
 @section('content')
 
 <div class="container">
+@include('layouts.buttons')
     <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card mt-5">
+        <div class="col-12 col-lg-8">
+            <div class="card mt-5 mb-5">
                 <div class="card-header">{{ __('ui.registro') }}<!-- {{ __('Register') }} --></div>
 
                 <div class="card-body">
@@ -71,7 +72,7 @@
                         <div class="form-group row mt-4">
                             <div class="col-md-6 offset-md-4">
                                 <p>{{ __('ui.yaregistrado') }}</p>
-                                <p><a href="{{route('login')}}">{{ __('ui.inicia') }}!</a></p>
+                                <p class="mb-0"><a href="{{route('login')}}">{{ __('ui.inicia') }}!</a></p>
                             </div>
                         </div>
                     </form>

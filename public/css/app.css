@@ -3400,7 +3400,6 @@ input[type=button].btn-block {
   z-index: 1000;
   display: none;
   float: left;
-  min-width: 10rem;
   padding: 0.5rem 0;
   margin: 0.125rem 0 0;
   font-size: 1rem;
@@ -10902,6 +10901,12 @@ a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6;
   }
+}
+
+.mydropdownmenu {
+  min-width: 53px !important;
+  background-color: black;
+  border: none;
 }
 
 * {
