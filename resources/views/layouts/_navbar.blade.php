@@ -9,11 +9,6 @@
     </div>
     <div class="collapse navbar-collapse align-content-center justify-content-end" id="navbarSupportedContent">
         <ul class="navbar-nav">
-
-            @include('layouts._locale',["lang"=>'es','nation'=>'es'])
-            @include('layouts._locale',["lang"=>'en','nation'=>'gb'])
-            @include('layouts._locale',["lang"=>'it','nation'=>'it'])
-
             <li class="nav-item dropdown">
                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false" v-pre>{{ __('ui.categorias') }}</a>

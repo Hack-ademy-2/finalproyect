@@ -40846,11 +40846,12 @@ window.Dropzone = __webpack_require__(/*! dropzone */ "./node_modules/dropzone/d
 Dropzone.autoDiscover = false;
 
 __webpack_require__(/*! ./announcementImages */ "./resources/js/announcementImages.js");
-/* $( document ).ready(function(){
-    $('.carousel').carousel({
-      interval: 5000
-    })
-}); */
+
+$(document).ready(function () {
+  $('.carousel').carousel({
+    interval: 7500
+  });
+});
 
 /***/ }),
 

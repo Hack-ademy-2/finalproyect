@@ -11,7 +11,11 @@ $font-primary: 'Ubuntu', sans-serif;
 $font-size-base: 0.9rem;
 $line-height-base: 1.6;
 
-
+.mydropdownmenu {
+    min-width:53px !important;
+    background-color:black;
+    border: none;
+}
 
 *{
     font-family: $font-primary;

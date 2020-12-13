@@ -5,6 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card mt-3">
+            @include('layouts.buttons')
                 <div class="card-header">{{ __('ui.inicia') }}
                     <!-- {{ __('Login') }} -->
                 </div>
