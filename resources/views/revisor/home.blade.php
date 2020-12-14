@@ -45,10 +45,11 @@
                         <div class="col-md-3">
                             <h3>Imagenes</h3>
                         </div>
-                            @foreach ($announcement->images as $image)
-
-                                <img src="{{Storage::url($image->file)}}" class="d-block w-100" alt="...">
-                            @endforeach
+                        <div class="col-md-3">
+                        @foreach ($announcement->images as $image)
+                            <img src="{{Storage::url($image->file)}}" class="card-img-top" alt="..." class="img-fluid">
+                        @endforeach
+                        </div>
                     </div>
                 </div>
             </div>

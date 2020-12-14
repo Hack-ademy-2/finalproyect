@@ -1,6 +1,13 @@
 <div class="col-4 mt-3 px-0">
     <div class="card mt-4 mb-5" style="width: 18rem;">
-        <img src="http://lorempixel.com/200/200?a" class="card-img-top" alt="...">
+        <div class="col-md-3">
+            
+                @foreach ($announcement->images as $image)
+                <div class="carousel-item @if($loop->first)active @endif">
+                    <img src="{{Storage::url($image->file)}}" class="card-img-top" alt="..." class="img-fluid">
+                </div>
+                @endforeach
+            </div>
         <div class="card-body d-flex flex-column">
             <h5 class="card-title font-weight-bold">{{$announcement->title}}</h5>
             <p class="card-text">{{$announcement->body}}</p>
