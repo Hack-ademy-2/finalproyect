@@ -23,6 +23,7 @@
         <h2>{{ __('ui.sinanuncios') }}</h2>
     </div>
 
+    
 </div>
 
 @endforelse

@@ -26,14 +26,16 @@
     @include('layouts._navbar')
 
     <div class="container">
-
+        <div class="row">
             @if(session('access.denied.revisor.only'))
             <div class="col-12 alert alert-danger mt-3 text-center">{{session('access.denied.revisor.only')}}</div>
             @endif
-            
+        </div>
+        <div class="row">
             @include('layouts.buttons')
 
             @yield('content')
+        </div>
     </div>
 
 </body>

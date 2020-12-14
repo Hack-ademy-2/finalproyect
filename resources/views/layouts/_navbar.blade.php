@@ -11,7 +11,7 @@
             <li class="nav-item dropdown" style="z-index: 1">
                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false" v-pre>{{ __('ui.categorias') }}</a>
-                <div class="dropdown-menu dropdown-menu-right text-white" aria-labelledby="navbarDropdown">
+                <div class="dropdown-menu dropdown-menu-right text-white" style="background-color: #42cafd !important; border-style: none;" aria-labelledby="navbarDropdown">
                     @foreach($categories as $category)
                     @include('announcement._categorynav')
                     @endforeach
@@ -22,9 +22,9 @@
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     {{ __('ui.productos') }}
                 </div>
-                <div class="dropdown-menu dropdown-menu-right" style="z-index: 1" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="{{route('announcement.create')}}">{{ __('ui.subir') }}</a>
-                    <a class="dropdown-item" href="{{route('home')}}">{{ __('ui.comprar') }}</a>
+                <div class="dropdown-menu dropdown-menu-right" style="z-index: 1;background-color: #42cafd !important; border-style: none;" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item text-white" href="{{route('announcement.create')}}">{{ __('ui.subir') }}</a>
+                    <a class="dropdown-item text-white" href="{{route('home')}}">{{ __('ui.comprar') }}</a>
                 </div>
             </li>
                 @guest
