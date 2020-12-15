@@ -10927,6 +10927,42 @@ a.text-dark:focus {
   background-color: #FDC500;
 }
 
+.bgc-primario {
+  background-color: #00296B;
+}
+
+.bgc-secundario {
+  background-color: #00509D;
+}
+
+.dropdown-item:hover {
+  background-color: #FDC500;
+}
+
+/* CARD HOME */
+
+.card-home {
+  display: flex;
+  border-radius: 10px;
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  border-bottom: 3px solid #ccc;
+  border-right: 3px solid #ccc;
+}
+
+.card-home img {
+  width: 300px;
+}
+
+/* Media Queries Desktop*/
+
+@media only screen and (min-width: 1024px) {
+  .card-home {
+    width: 684px;
+    height: 202px;
+  }
+}
+
 .flag-icon-background,
 .flag-icon {
   background-size: contain;
