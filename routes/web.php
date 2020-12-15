@@ -19,6 +19,7 @@ use App\Http\Controllers\AnnouncementController;
 
 //Route::get('/', [HomeController::class,'index'])->name('home');
 Route::get('/announcement/create', [HomeController::class,'newAnnouncement'])->name('announcement.new');
+Route::get('/revisor/solicitud', [HomeController::class,'formRevisor'])->name('revisor.formrevisor');
 Route::get('/', [PublicController::class,'index'])->name('home');
 //Rutas para los Anuncios
 
@@ -49,6 +50,7 @@ Route::delete('/announcement/images/remove', [AnnouncementController::class, 're
 Route::post('/announcement', [AnnouncementController::class,'store'])->name('announcement.store');
 Route::post('/locale/{locale}', [PublicController::class,'locale'])->name('locale');
 Route::post('/announcement/images/upload', [AnnouncementController::class,'uploadImages'])->name('announcement.images.upload');
+Route::post('/newrevisor', [HomeController::class,'newRevisor'])->name('newrevisor');
 
 //Revisor
 Route::get('/revisor',[RevisorController::class,'index'] )->name('revisor.home');

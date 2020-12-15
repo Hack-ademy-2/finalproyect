@@ -37,8 +37,9 @@
     <!-- Footer Elements -->
   
     <!-- Copyright -->
-    <div class="footer-copyright text-center text-white py-3">© 2020 Copyright:
-      <a class="text-white" href="#"> aulapop.com</a>
+    <div class="footer-copyright text-center text-white py-3">
+      <p><a class="text-white" style="z-index: 2" href="{{route('revisor.formrevisor')}}"> Solicitud Revisor</a></p>
+      <a class="text-white" href="#">© 2020 Copyright: aulapop.com</a>
     </div>
     <!-- Copyright -->
   

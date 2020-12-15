@@ -34,6 +34,10 @@ return [
     'usuario'=>'User',
     'rechazar'=>'Refuse',
     'aceptar'=>'Acept',
+    'solicitud'=>'Request',
+    'motivo'=>'Reason',
+    'solicitudrevisor'=>'Ex: Id like to work reviewing ads to get some extra money!',
+    'enviar'=>'Send',
 
 
 

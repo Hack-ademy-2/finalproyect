@@ -33,7 +33,11 @@ return [
     'anuncio'=>'Annunci',
     'usuario'=>'Utente',
     'rechazar'=>'Rifiutare',
+    'solicitud'=>'Richiesta',
     'aceptar'=>'Accettare',
+    'motivo'=>'Motivo',
+    'enviar'=>'Spedire',
+    'solicitudrevisor'=>'Es: Mi piacerebbe lavorare alla revisione degli annunci per guadagnare soldi extra!',
 
 
 
