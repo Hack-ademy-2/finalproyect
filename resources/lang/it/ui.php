@@ -28,7 +28,12 @@ return [
     'salir'=>'Disconnettersi',
     'noregistrado'=>'Non sei ancora registrato?',
     'imagenesform'=>'Immagini',
+    'imagenes'=>'Immagini',
     'comparar'=>'Confrontare con gli altri',
+    'anuncio'=>'Annunci',
+    'usuario'=>'Utente',
+    'rechazar'=>'Rifiutare',
+    'aceptar'=>'Accettare',
 
 
 

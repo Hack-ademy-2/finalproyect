@@ -3,14 +3,19 @@
 namespace App\Models;
 
 use App\Models\Announcement;
+use App\Models\AnnouncementImage;
 use Illuminate\Contracts\Cache\Store;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class AnnouncementImage extends Model
 {
     use HasFactory;
+    
+    protected $casts = [
+        'labels'=>'array'
+    ];
     
     public function announcement()
     {
