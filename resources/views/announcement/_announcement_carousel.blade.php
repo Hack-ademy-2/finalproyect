@@ -1,3 +1,4 @@
+
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
   @foreach ($announcement->images as $image)

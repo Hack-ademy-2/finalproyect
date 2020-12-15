@@ -8,7 +8,7 @@
     </div>
     <div class="collapse navbar-collapse align-content-center justify-content-end" id="navbarSupportedContent">
         <ul class="navbar-nav">
-            <li class="nav-item dropdown" style="z-index: 1">
+            <li class="nav-item dropdown text-white" style="z-index: 1">
                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false" v-pre>{{ __('ui.categorias') }}</a>
                 <div class="dropdown-menu dropdown-menu-right text-white" style="background-color: #42cafd !important; border-style: none;" aria-labelledby="navbarDropdown">

@@ -28,6 +28,8 @@ Route::get('/category/{name}/{id}/announcements', [PublicController::class,'anno
 
 Route::get('/announcement', [AnnouncementController::class, 'index'])->name('announcement.index');
 
+Route::get('/announcement/formcontact', [AnnouncementController::class, 'formContact'])->name('announcement.formcontact');
+
 Route::get('/announcement/create', [AnnouncementController::class, 'create'])->name('announcement.create');
 
 Route::get('/announcement/{id}/details', [PublicController::class,'show'])->name('announcement.show');

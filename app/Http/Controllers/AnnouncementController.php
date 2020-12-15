@@ -161,4 +161,10 @@ class AnnouncementController extends Controller
      return response()->json($data);
    }
    
+   public function formContact()
+
+   {  $announcement = Announcement::all();
+      
+      return view ('announcement.formcontact',compact('announcement'));
+   }
 }
