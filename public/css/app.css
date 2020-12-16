@@ -10904,6 +10904,12 @@ a.text-dark:focus {
   }
 }
 
+.mydropdownmenu {
+  min-width: 53px !important;
+  background-color: black;
+  border: none;
+}
+
 * {
   font-family: "Ubuntu", sans-serif;
 }

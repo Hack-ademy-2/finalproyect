@@ -40847,6 +40847,12 @@ Dropzone.autoDiscover = false;
 
 __webpack_require__(/*! ./announcementImages */ "./resources/js/announcementImages.js");
 
+$(document).ready(function () {
+  $('.carousel').carousel({
+    interval: 7500
+  });
+});
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":
@@ -40906,8 +40912,13 @@ try {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< HEAD
 __webpack_require__(/*! /Users/azza/wa/proyectos-laravel/pronto.es-javinahu/resources/js/app.js */"./resources/js/app.js");
 module.exports = __webpack_require__(/*! /Users/azza/wa/proyectos-laravel/pronto.es-javinahu/resources/sass/app.scss */"./resources/sass/app.scss");
+=======
+__webpack_require__(/*! /Users/franciscojavierninomiralles/wa/proyect-laravel/finalproyect/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/franciscojavierninomiralles/wa/proyect-laravel/finalproyect/resources/sass/app.scss */"./resources/sass/app.scss");
+>>>>>>> 5e4db7c01b956666fa4693debc7241ca0c14a7e7
 
 
 /***/ })

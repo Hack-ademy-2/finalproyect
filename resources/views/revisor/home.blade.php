@@ -46,9 +46,9 @@
                             <h3>Imagenes</h3>
                         </div>
                         <div class="col-md-3">
-                        @foreach ($announcement->images as $image)
-                            <img src="{{Storage::url($image->file)}}" class="card-img-top" alt="..." class="img-fluid">
-                        @endforeach
+                        <div>
+                            @include ('announcement._announcement_carousel')
+                        </div>
                         </div>
                     </div>
                 </div>

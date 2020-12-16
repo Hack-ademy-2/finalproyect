@@ -28,6 +28,8 @@ return [
     'salir'=>'Disconnettersi',
     'noregistrado'=>'Non sei ancora registrato?',
     'imagenesform'=>'Immagini',
+    'comparar'=>'Confrontare con gli altri',
+
 
 
 

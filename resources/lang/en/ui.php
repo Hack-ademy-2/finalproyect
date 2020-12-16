@@ -28,6 +28,7 @@ return [
     'salir'=>'Logout',
     'noregistrado'=>'Still not register?',
     'imagenesform'=>'Images',
+    'comparar'=>'Compare with others',
 
 
 

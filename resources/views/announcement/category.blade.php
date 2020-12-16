@@ -1,12 +1,12 @@
 @extends('layouts.app')
 @section('content')
 
-<div class="row">
+<div class="row ">
     <div class="col-12 mt-5 text-center">
-        <h1>{{ __('ui.titulo_categoria')}}: {{$category->name}}</h1>
+        <h1>{{$category->name}}</h1>
     </div>
     @forelse ($announcements as $announcement)
-    <div class="col-4 mt-3">
+    <div class="col-12 col-md-6 col-lg-4 mt-3 d-flex justify-content-center">
         <div class="card mt-4" style="width: 19rem;">
             <img src="http://lorempixel.com/200/200?a{{$loop->iteration}}" class="card-img-top" alt="...">
             <div class="card-body d-flex flex-column ">
