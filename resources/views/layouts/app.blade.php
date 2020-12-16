@@ -25,7 +25,7 @@
 <body>
     @include('layouts._navbar')
 
-    <div class="container">
+    <div class="container main-content">
         <div class="row">
             @if(session('access.denied.revisor.only'))
             <div class="col-12 alert alert-danger mt-3 text-center">{{session('access.denied.revisor.only')}}</div>
