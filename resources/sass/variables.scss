@@ -58,6 +58,15 @@ $line-height-base: 1.6;
 }
 
 
+// Botones
+
+.box-botones{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+}
 
 
 

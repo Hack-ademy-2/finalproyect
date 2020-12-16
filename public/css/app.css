@@ -10954,6 +10954,14 @@ a.text-dark:focus {
   width: 300px;
 }
 
+.box-botones {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+}
+
 /* Media Queries Desktop*/
 
 @media only screen and (min-width: 1024px) {

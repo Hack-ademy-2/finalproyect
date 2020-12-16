@@ -1,13 +1,4 @@
-<div style="z-index:0">
-    <div class="d-none d-lg-block d-flex justify-content-end">
-        <div class="mt-3 mb-1 text-right px-3 pb-5 fixed-bottom d-flex justify-content-end"><a
-                href="{{url()->previous()}}" class="btn btn-warning" style="width:53px;"><i
-                    class="fas fa-arrow-circle-left"></i></a>
-        </div>
-        <div class="mt-3 mb-1 text-right px-3 pb-1 fixed-bottom d-flex justify-content-end"><a href="{{route('home')}}"
-                class="btn btn-light" style="width:53px;"><i class="fas fa-home"></i></a>
-        </div>
-    </div>
+<div style="">
     <div class="dropdown mt-4 pt-5 pr-3 text-right fixed-top">
         <button style="width:53px;" class="btn btn-dark" type="button" id="dropdownMenuButton" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false"><i class="fas fa-globe-americas"></i></button>
