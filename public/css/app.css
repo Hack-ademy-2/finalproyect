@@ -10981,6 +10981,10 @@ a.text-dark:focus {
   display: inline-block;
 }
 
+.main-content {
+  min-height: 82vh;
+}
+
 /* Media Queries Desktop*/
 
 @media only screen and (min-width: 1024px) {
