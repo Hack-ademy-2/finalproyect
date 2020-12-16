@@ -9,7 +9,7 @@
     <div class="collapse navbar-collapse align-content-center justify-content-end" id="navbarSupportedContent">
         <ul class="navbar-nav">
             <li class="nav-item dropdown text-white" style="z-index: 1">
-                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                <a id="navbarDropdown" class="nav-link dropdown-toggle text-white" href="#" role="button" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false" v-pre>{{ __('ui.categorias') }}</a>
                 <div class="dropdown-menu dropdown-menu-right text-white bgc-secundario" style="border-style: none;" aria-labelledby="navbarDropdown">
                     @foreach($categories as $category)
@@ -43,7 +43,7 @@
             @endif
             @else
             <li class="nav-item dropdown">
-                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                <a id="navbarDropdown" class="nav-link dropdown-toggle" style="color: #ffc107" href="#" role="button" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false" v-pre>
                     {{ Auth::user()->name }}
                 </a>
@@ -61,7 +61,7 @@
             </li>
             @if (Auth::user()->is_revisor)
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('revisor.home') }}">
+                <a class="nav-link text-white" href="{{ route('revisor.home') }}">
                 {{ __('ui.revisor') }}
                     <span class="badge badge-pill badge-warning">
                         {{\App\Models\Announcement::ToBeRevisionedCount() }}
