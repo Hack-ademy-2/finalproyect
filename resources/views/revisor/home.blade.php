@@ -46,32 +46,30 @@
                             <h5>{{ __('ui.imagenes')}}</h5>
                         </div>
                         <div class="row">
-                            <div class="col-md-6 d-flex justify-content-center">
-                                @include ('announcement._announcement_carousel')
-                            </div>
                             @foreach ($announcement->images as $image)
-                            <div class="col-md-6 d-flex flex-column justify-content-center">
-                                <p>Adult: {{$image->adult}} - Spoof: {{$image->spoof}} </p>
-                                <p>Medical: {{$image->medical}} - Violence: {{$image->violence}}</p>
-                                <p>Racy: {{$image->racy}}</p>
-                                <!-- ID: {{$image->id}} <br> URL:
-                                    {{Storage::url($image->file)}} <br> -->
-                            </div>
-                            <div class="col-12 pl-5">
-                                <div class="dropdown float-right">
-                                    <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton"
-                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Labels
-                                    </button>
-                                    @if($image->labels)
-                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-                                        @foreach ($image->labels as $label)
-                                        <a class="dropdown-item" href="#">{{$label}}</a>
-                                        @endforeach
-                                    </div>
-                                    @endif
+                                <div class="col-md-6 d-flex justify-content-center">
+                                    <img src="{{$image->getUrl(300, 150)}}" class="d-block" alt="...">
                                 </div>
-                            </div>
+                                <div class="col-md-6 d-flex flex-column justify-content-center">
+                                    <p>Adult: {{$image->adult}} - Spoof: {{$image->spoof}} </p>
+                                    <p>Medical: {{$image->medical}} - Violence: {{$image->violence}}</p>
+                                    <p>Racy: {{$image->racy}}</p>
+                                </div>
+                                <div class="col-12 pl-5">
+                                    <div class="dropdown float-right mr-3">
+                                        <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Labels
+                                        </button>
+                                        @if($image->labels)
+                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                                            @foreach ($image->labels as $label)
+                                            <a class="dropdown-item" href="#">{{$label}}</a>
+                                            @endforeach
+                                        </div>
+                                        @endif
+                                    </div>
+                                </div>
                             @endforeach
                         </div>
                     </div>

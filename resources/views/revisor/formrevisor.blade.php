@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 <div class="row">
-    <div class="col-8 offset-2">
+    <div class="col-8 offset-2 my-auto">
         <div class="card my-5">
             <div class="card-header">{{ __('ui.solicitud') }} {{ __('ui.revisor') }}</div>
             <div class="card-body">
