@@ -61,12 +61,12 @@
             @if (Auth::user()->is_admin)
             <li class="nav-item">
                 <a class="nav-link text-white" href="{{ route('admin.home') }}">
-                {{ __('ui.revisor') }}
-                    <span class="badge badge-pill badge-warning">
+                Admin
+                    <span class="badge badge-pill badge-info">
                         {{\App\Models\RequestRevisor::ToBeRevisionedCount() }}
                     </span>
-                    </a>
-                </li>
+                </a>
+            </li>
                     
             @endif
             @if (Auth::user()->is_revisor)
@@ -76,8 +76,8 @@
                     <span class="badge badge-pill badge-warning">
                         {{\App\Models\Announcement::ToBeRevisionedCount() }}
                     </span>
-                    </a>
-                </li>
+                </a>
+            </li>
                     
             @endif
             @endguest
