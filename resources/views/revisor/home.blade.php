@@ -4,7 +4,7 @@
 <div class='container'>
 
     @if($announcement)
-    <div class='row my-4 mb-5'>
+    <div class='row m-5'>
 
         <div class='col-12'>
             <div class="card">
@@ -57,7 +57,7 @@
                                 <!-- ID: {{$image->id}} <br> URL:
                                     {{Storage::url($image->file)}} <br> -->
                             </div>
-                            <div class="col-12">
+                            <div class="col-12 pl-5">
                             <div class="dropdown float-right">
                                 <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Labels

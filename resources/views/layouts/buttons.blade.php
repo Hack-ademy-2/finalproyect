@@ -1,4 +1,4 @@
-<div style="">
+<div>
     <div class="dropdown mt-4 pt-5 pr-3 text-right fixed-top">
         <button style="width:53px;" class="btn btn-dark" type="button" id="dropdownMenuButton" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false"><i class="fas fa-globe-americas"></i></button>

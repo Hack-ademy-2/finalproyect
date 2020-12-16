@@ -40,8 +40,8 @@
    
    @include('layouts.footer')
    <div class="btn box-botones">
-    <a href="{{url()->previous()}}" class="btn btn-warning" style="width:53px;"><i class="fas fa-arrow-circle-left"></i></a>
-    <a href="{{route('home')}}" class="btn btn-light" style="width:53px;"><i class="fas fa-home"></i></a>
+    <a href="{{url()->previous()}}" class="btn btn-warning mb-2" style="width:53px;"><i class="fas fa-arrow-circle-left"></i></a>
+    <a href="{{route('home')}}" class="btn btn-light mb-2" style="width:53px;"><i class="fas fa-home"></i></a>
 </div>
 
 </body>
