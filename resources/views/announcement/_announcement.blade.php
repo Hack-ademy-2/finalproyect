@@ -1,4 +1,4 @@
-<div class="col-12 col-sm-6 col-lg-4 mt-3 px-0 d-flex justify-content-center">
+<div class="col-12 col-sm-6 col-lg-4 mt-3 px-0">
     <div class="card mt-4 mb-5" style="width: 18rem;">
         <div>
             @include ('announcement._announcement_carousel')
