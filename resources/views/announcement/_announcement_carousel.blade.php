@@ -1,8 +1,9 @@
+
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
   @foreach ($announcement->images as $image)
     <div class="carousel-item @if($loop->first) active @endif">
-    <img src="{{$image->getUrl(300, 150)}}" class="d-block w-100" alt="...">
+    <img src="{{$image->getUrl(300, 150)}}" class="d-block" alt="...">
     </div>
     @endforeach
   </div>

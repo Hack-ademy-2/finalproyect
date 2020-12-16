@@ -28,7 +28,16 @@ return [
     'salir'=>'Salir',
     'noregistrado'=>'Aún no te registras?',
     'imagenesform'=>'Imágenes',
+    'imagenes'=>'Imágenes',
     'comparar'=>'Comparar con otros',
+    'anuncio'=>'Anuncio',
+    'usuario'=>'Usuario',
+    'rechazar'=>'Rechazar',
+    'aceptar'=>'Aceptar',
+    'solicitud'=>'Solicitud',
+    'enviar'=>'Enviar',
+    'motivo'=>'Motivo',
+    'solicitudrevisor'=>'Ej: Me gustaría trabajar revisando anuncios para conseguir algo de dinero extra!',
 
 
 

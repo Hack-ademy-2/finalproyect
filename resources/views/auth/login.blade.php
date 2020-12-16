@@ -2,10 +2,10 @@
 @section('content')
 
 <div class="container">
+            @include('layouts.buttons')
     <div class="row justify-content-center mt-4">
         <div class="col-10 col-lg-8">
             <div class="card mt-3">
-            @include('layouts.buttons')
                 <div class="card-header">{{ __('ui.inicia') }}
                     <!-- {{ __('Login') }} -->
                 </div>

@@ -1,7 +1,10 @@
 // Colors
 
-$primary-color: #42CAFD;
-$secondaruy-color: #464D77;
+$primary-color: #00296B;
+$secondary-color: #FDC500;
+$azul-claro: #00509D;
+$azul-oscuro: #003F88;
+$amarillo-claro: #ffd500;
 $blanco: #FFF;
 $negro: #000;
 
@@ -29,5 +32,42 @@ $line-height-base: 1.6;
     color: $blanco;
 }
 .btn-secundary-color{
-    background-color: $secondaruy-color;
+    background-color: $secondary-color;
+}
+.bgc-primario{
+    background-color: $primary-color;
+}
+.bgc-secundario{
+    background-color: $azul-claro;
+}
+.dropdown-item:hover{
+    background-color: $secondary-color;
+}
+/* CARD HOME */
+
+.card-home{
+    display: flex;
+    border-radius: 10px;
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-bottom: 3px solid #ccc;
+    border-right: 3px solid #ccc;
+}
+.card-home img{
+    width: 300px;
+}
+
+
+
+
+
+/* Media Queries Desktop*/
+
+@media only screen and (min-width: 1024px){
+
+    .card-home{
+            width: 684px;
+            height: 202px;
+    }
+
 }

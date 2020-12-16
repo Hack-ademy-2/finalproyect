@@ -28,7 +28,16 @@ return [
     'salir'=>'Logout',
     'noregistrado'=>'Still not register?',
     'imagenesform'=>'Images',
+    'imagenes'=>'Images',
     'comparar'=>'Compare with others',
+    'anuncio'=>'Announcement',
+    'usuario'=>'User',
+    'rechazar'=>'Refuse',
+    'aceptar'=>'Acept',
+    'solicitud'=>'Request',
+    'motivo'=>'Reason',
+    'solicitudrevisor'=>'Ex: Id like to work reviewing ads to get some extra money!',
+    'enviar'=>'Send',
 
 
 
