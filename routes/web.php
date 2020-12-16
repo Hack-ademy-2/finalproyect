@@ -2,9 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\RevisorController;
 use App\Http\Controllers\AnnouncementController;
+use App\Http\Controllers\RequestRevisorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,6 +41,8 @@ Route::get('/announcement/{announcement}/edit', [AnnouncementController::class,'
 
 Route::get('/announcement/images', [AnnouncementController::class, 'getImages'])->name('announcement.images');
 
+Route::get('/admin',[AdminController::class,'index'] )->name('admin.home');
+
 //MATCH
 Route::match(['put','patch'], '/announcement/{announcement}', [AnnouncementController::class, 'update'])->name('announcement.update');
 
@@ -50,7 +54,11 @@ Route::delete('/announcement/images/remove', [AnnouncementController::class, 're
 Route::post('/announcement', [AnnouncementController::class,'store'])->name('announcement.store');
 Route::post('/locale/{locale}', [PublicController::class,'locale'])->name('locale');
 Route::post('/announcement/images/upload', [AnnouncementController::class,'uploadImages'])->name('announcement.images.upload');
-Route::post('/newrevisor', [HomeController::class,'newRevisor'])->name('newrevisor');
+
+
+Route::post('/newrevisor', [AnnouncementController::class,'revisor'])->name('revisor.store');
+Route::post('/admin/revisor/{id}/accept',[AdminController::class,'accept'])->name('admin.revisor.accept');
+Route::post('/admin/revisor/{id}/reject',[AdminController::class,'reject'])->name('admin.revisor.reject');
 
 //Revisor
 Route::get('/revisor',[RevisorController::class,'index'] )->name('revisor.home');

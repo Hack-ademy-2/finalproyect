@@ -7,6 +7,7 @@ use App\Models\Category;
 use App\Jobs\ResizeImage;
 use App\Models\Announcement;
 use Illuminate\Http\Request;
+use App\Models\RequestRevisor;
 use App\Models\AnnouncementImage;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
@@ -168,4 +169,15 @@ class AnnouncementController extends Controller
       
       return view ('announcement.formcontact',compact('announcement'));
    }
+
+   public function revisor (Request $request){
+
+      $r = new RequestRevisor;
+      $r->name = $request->input('name');
+      $r->email = $request->input('email');
+      $r->reason = $request->input('reason');
+      $r->save();
+
+      return redirect()->route('home')->with('announcement.create.success','Solicitud enviada');
+  }
 }

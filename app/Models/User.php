@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Models\Announcement;
+use App\Models\RequestRevisor;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -45,6 +46,11 @@ class User extends Authenticatable
     public function announcements(){
 
         return $this->HasMany(Announcement::class);
+    }
+
+    public function requestrevisor(){
+
+        return $this->belongsTo(RequestRevisor::class);
     }
 
 }
