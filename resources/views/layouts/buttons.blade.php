@@ -1,8 +1,6 @@
-<div>
-    <div class="dropdown mt-4 pt-5 pr-3 text-right fixed-top">
-        <button style="width:53px;" class="btn btn-dark" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false"><i class="fas fa-globe-americas"></i></button>
-        <div class="dropdown-menu mydropdownmenu dropdown-menu-right" style="width:44px"
+<div class="box-lang mr-3">
+    <button style="width:53px;" class="btn btn-dark" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-globe-americas"></i></button>
+    <div class="box-idiomas" style="width:44px"
             aria-labelledby="dropdownMenuButton">
             <form action="{{route('locale',['locale'=>'es'])}}" method="POST" style="width:44px">
                 @csrf
@@ -23,6 +21,5 @@
                 </button>
             </form>
         </div>
-    </div>
-</div>
+    
 </div>

@@ -68,6 +68,28 @@ $line-height-base: 1.6;
     right: 0px;
 }
 
+.box-lang{
+    position: fixed;
+    top: 80px;
+    right: -3px;
+    display: flex;
+    flex-direction: column;
+}
+
+.box-idiomas{
+    display: none;
+    background-color: #343a40;
+    min-width: 53px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.box-lang:hover .box-idiomas{
+    display: inline-block;
+}
+
+
+
 /* Media Queries Desktop*/
 
 @media only screen and (min-width: 1024px){
