@@ -58,17 +58,18 @@
                                     {{Storage::url($image->file)}} <br> -->
                             </div>
                             <div class="col-12 pl-5">
-                            <div class="dropdown float-right">
-                                <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Labels
-                                </button>
-                                @if($image->labels)
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-                                @foreach ($image->labels as $label)
-                                    <a class="dropdown-item" href="#">{{$label}}</a>
-                                @endforeach
-                                </div>
-                                @endif
+                                <div class="dropdown float-right">
+                                    <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Labels
+                                    </button>
+                                    @if($image->labels)
+                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                                        @foreach ($image->labels as $label)
+                                        <a class="dropdown-item" href="#">{{$label}}</a>
+                                        @endforeach
+                                    </div>
+                                    @endif
                                 </div>
                             </div>
                             @endforeach

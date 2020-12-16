@@ -12,20 +12,17 @@
 </div>
 
 <div class="row">
-@forelse ($announcements as $announcement)
+    @forelse ($announcements as $announcement)
 
-@include('announcement._announcement')
+    @include('announcement._announcement')
 
-@empty
+    @empty
 
     <div class="col-12 mt-5 text-center py-0">
         <h2>{{ __('ui.sinanuncios') }}</h2>
     </div>
-
-    
+    @endforelse
 </div>
-
-@endforelse
 
 
 @endsection
