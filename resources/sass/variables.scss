@@ -11,6 +11,7 @@ $negro: #000;
 
 // Typography
 $font-primary: 'Ubuntu', sans-serif;
+$font-secondary: 'Architects Daughter', cursive;
 $font-size-base: 0.9rem;
 $line-height-base: 1.6;
 
@@ -91,15 +92,26 @@ $line-height-base: 1.6;
 // Estilos generales
 
 .main-content{
+    width: 100%;
+    height: 100vh;
     min-height: 82vh;
+    background-color: #0975a0;
+}
+
+.tituloshead{
+    font-size: 3rem;
+    color: white;
+    font-family: $font-secondary;
+
+    
 }
 
 .masthead {
-    width: 100%;
-    height: 100vh;
-    background-image: url('https://branding.ifas.ufl.edu/media/brandingifasufledu/virtual-backgrounds/Ext_Spiral.jpg');
+    max-width: 100%;
+    height: 80vh;
+    background-image: url('https://www.mckinsey.com/~/media/McKinsey/Industries/Technology%20Media%20and%20Telecommunications/High%20Tech/Our%20Insights/The%20future%20of%20connectivity%20Enabling%20the%20Internet%20of%20Things/The-future-of-connectivity-1536x1536-400.jpg');
     background-size: cover;
-    background-position: center;
+    background-position: initial;
     background-repeat: no-repeat;
   }
 

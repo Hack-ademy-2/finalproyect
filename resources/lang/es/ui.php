@@ -1,6 +1,6 @@
 <?php
 return [
-    'tituloppal'=>'Bienvenido!',
+    'tituloppal'=>'Bienvenido !',
     'comprar'=>'Comprar',
     'subir'=>'Subir',
     'productos'=>'Productos',
@@ -38,6 +38,7 @@ return [
     'enviar'=>'Enviar',
     'motivo'=>'Motivo',
     'solicitudrevisor'=>'Ej: Me gustaría trabajar revisando anuncios para conseguir algo de dinero extra!',
+    'sin_productos'=>'No hay productos relacionados a tu búsqueda',
 
 
 

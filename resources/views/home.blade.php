@@ -7,9 +7,6 @@
         @endif
     </div>
 </div>
-<div class="col-12 text-center">
-    <h1 class="mb-0 mt-5">{{ __('ui.tituloppal') }}</h1>
-</div>
 
 <div class="row">
     @forelse ($announcements as $announcement)

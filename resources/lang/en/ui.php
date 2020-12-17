@@ -1,6 +1,6 @@
 <?php
 return [
-    'tituloppal'=>'Welcome',
+    'tituloppal'=>'Welcome !',
     'comprar'=>'Buy',
     'subir'=>'Upload',
     'productos'=>'Products',
@@ -38,6 +38,7 @@ return [
     'motivo'=>'Reason',
     'solicitudrevisor'=>'Ex: Id like to work reviewing ads to get some extra money!',
     'enviar'=>'Send',
+    'sin_productos'=>'There are no products related to your search'
 
 
 

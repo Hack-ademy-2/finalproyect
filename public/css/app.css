@@ -1,6 +1,6 @@
-@charset "UTF-8";
-@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css);
-@import url(https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,700;1,400&display=swap);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css);@import url(https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;
+
+0,400;0,700;1,400&display=swap);@import url(https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap);@charset "UTF-8";
 
 /*!
  * Bootstrap v4.5.3 (https://getbootstrap.com/)
@@ -10982,15 +10982,24 @@ a.text-dark:focus {
 }
 
 .main-content {
+  width: 100%;
+  height: 100vh;
   min-height: 82vh;
+  background-color: #0975a0;
+}
+
+.tituloshead {
+  font-size: 3rem;
+  color: white;
+  font-family: "Architects Daughter", cursive;
 }
 
 .masthead {
-  width: 100%;
-  height: 100vh;
-  background-image: url("https://branding.ifas.ufl.edu/media/brandingifasufledu/virtual-backgrounds/Ext_Spiral.jpg");
+  max-width: 100%;
+  height: 80vh;
+  background-image: url("https://www.mckinsey.com/~/media/McKinsey/Industries/Technology%20Media%20and%20Telecommunications/High%20Tech/Our%20Insights/The%20future%20of%20connectivity%20Enabling%20the%20Internet%20of%20Things/The-future-of-connectivity-1536x1536-400.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: initial;
   background-repeat: no-repeat;
 }
 
@@ -13464,7 +13473,7 @@ a.text-dark:focus {
   width: 80px;
   margin-left: -40px;
   background: rgba(255, 255, 255, 0.9);
-  --webkit-transform: scale(1);
+  -webkit-transform: scale(1);
   border-radius: 8px;
   overflow: hidden;
 }

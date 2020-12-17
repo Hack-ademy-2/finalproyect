@@ -8,7 +8,7 @@
     @forelse ($announcements as $announcement)
     <div class="col-12 col-md-6 col-lg-4 mt-3 d-flex justify-content-center">
         <div class="card mt-4" style="width: 19rem;">
-            <img src="http://lorempixel.com/200/200?a{{$loop->iteration}}" class="card-img-top" alt="...">
+            <img src="{{$announcement->images()->first()->getUrl(300, 200)}}" class="card-img-top" alt="...">
             <div class="card-body d-flex flex-column ">
                 <h5 class="card-title font-weight-bold">{{$announcement->title}}</h5>
                 <p class="card-text">{{$announcement->body}}</p>
@@ -26,10 +26,8 @@
     </div>
 
     @empty
-    <div class="row">
-        <div class="col-12 mt-5">
+    <div class="col-12 mt-5 text-center">
             <h2>{{__('ui.sin_productos')}}</h2>
-        </div>
     </div>
 
     @endforelse
