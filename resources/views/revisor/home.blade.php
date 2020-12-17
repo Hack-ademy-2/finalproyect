@@ -48,7 +48,7 @@
                         <div class="row">
                             @foreach ($announcement->images as $image)
                                 <div class="col-md-6 d-flex justify-content-center">
-                                    <img src="{{$image->getUrl(300, 150)}}" class="d-block" alt="...">
+                                    <img src="{{$image->getUrl(300, 200)}}" class="d-block" alt="...">
                                 </div>
                                 <div class="col-md-6 d-flex flex-column justify-content-center">
                                     <p>Adult: {{$image->adult}} - Spoof: {{$image->spoof}} </p>

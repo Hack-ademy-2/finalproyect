@@ -16,7 +16,7 @@
 
 
     {{-- Styles --}}
-    <link rel="stylesheet" href="{{asset('css/app.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/app.css')}}">
 
 
     <title>Mi AulaPOP</title>
@@ -24,7 +24,6 @@
 
 <body>
     @include('layouts._navbar')
-
     <div class="container main-content">
         <div class="row">
             @if(session('access.denied.revisor.only'))
@@ -34,7 +33,7 @@
         @include('layouts.buttons')
         @yield('content')
     </div>
-    
+
     @include('layouts.footer')
 
     <div class="btn box-botones">

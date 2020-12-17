@@ -10,7 +10,7 @@
     <p><strong> {{ __('ui.categoria') }} <a href="{{route('announcement.category',['name'=>$announcement->category->name,'id'=>$announcement->category->id])}}" class="text-decoration-none">{{$announcement->category->name}}</a></strong>
     <p><a href="#" class="btn btn-info mt-3">{{ __('ui.comprar') }}</a></p>
     <p><a href="{{route('announcement.category',['name'=>$announcement->category->name,'id'=>$announcement->category->id])}}" class="btn btn-warning">Comparar con otros: {{$announcement->category->name}}</a></p>
-    <p><a href="{{route('announcement.formcontact')}}" class="btn btn-light">Contactar al vendedor: {{$announcement->user->name}}</a></p>
+    <p><a href="mailto:{{$announcement->user->email}}" class="btn btn-light">Contactar al vendedor: {{$announcement->user->name}}</a></p>
     <p class="mt-3 mb-0 font-italic text-right">{{ __('ui.publicado') }} {{$announcement->created_at->format('d/m/Y')}}
     </p>
 </div>

@@ -1,11 +1,11 @@
 <div class="col-12 col-sm-6 col-lg-4 mt-3 px-0 d-flex justify-content-center">
-    <div class="card mt-4 mb-5" style="width: 18rem;">
+    <div class="card mt-4 mb-5" style="width:345px">
+        <div class="card-body d-flex flex-column" style="min-height:424px;">
         <div>
-            @include ('announcement._announcement_carousel')
+            <img src="{{$announcement->images()->first()->getUrl(300, 200)}}" alt="">
         </div>
-        <div class="card-body d-flex flex-column" style="min-height:424px">
             <h5 class="card-title font-weight-bold">{{$announcement->title}}</h5>
-            <p class="card-text" style="min-height:50px">{{$announcement->body}}</p>
+            <p class="card-text" style="min-height:50px">{{substr($announcement->body, 0, 30)}} ... </p>
             <p class="my-3"> {{ __('ui.categoria') }} <a
                     href="{{route('announcement.category',['name'=>$announcement->category->name,'id'=>$announcement->category->id])}}"
                     class="text-decoration-none">{{$announcement->category->name}}</a></p>

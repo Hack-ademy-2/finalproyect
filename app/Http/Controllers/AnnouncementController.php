@@ -76,7 +76,8 @@ class AnnouncementController extends Controller
          
          Storage::move($image,$newFilePath);
 
-         dispatch(new ResizeImage($newFilePath,300,150));
+         dispatch(new ResizeImage($newFilePath,680,400));
+         dispatch(new ResizeImage($newFilePath,300,200));
 
          $i->file = $newFilePath;
          $i->announcement_id = $a->id;

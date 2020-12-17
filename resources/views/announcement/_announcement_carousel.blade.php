@@ -3,7 +3,7 @@
   <div class="carousel-inner">
   @foreach ($announcement->images as $image)
     <div class="carousel-item @if($loop->first) active @endif">
-    <img src="{{$image->getUrl(300, 150)}}" class="d-block" alt="...">
+    <img src="{{$image->getUrl(680, 400)}}" class="d-block" alt="...">
     </div>
     @endforeach
   </div>
