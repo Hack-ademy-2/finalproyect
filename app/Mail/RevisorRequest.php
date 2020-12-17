@@ -20,7 +20,7 @@ class RevisorRequest extends Mailable
     {
         $this->name = $newRevisor['name'];
         $this->email = $newRevisor['email'];
-        $this->requestRevisor = $newRevisor['requestRevisor'];
+        $this->reason = $newRevisor['reason'];
     }
 
     public function build()

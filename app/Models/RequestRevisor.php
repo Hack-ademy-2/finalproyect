@@ -9,14 +9,9 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class RequestRevisor extends Model
 {
     use HasFactory;
-
+    
     static public function ToBeRevisionedCount()
-    {
-        return RequestRevisor::where('is_accepted', null)->count();
-    }
-
-    public function user(){
-
-        return $this->HasMany(User::class);
+    {   
+        return RequestRevisor::all()->count();
     }
 }

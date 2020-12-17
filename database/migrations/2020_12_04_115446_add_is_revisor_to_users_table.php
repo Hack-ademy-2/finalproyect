@@ -15,7 +15,7 @@ class AddIsRevisorToUsersTable extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             
-        $table->boolean('is_revisor')->default(false);
+        $table->boolean('is_revisor')->nullable();
         });
     }
 

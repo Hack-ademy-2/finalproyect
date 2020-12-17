@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 use App\Models\RequestRevisor;
 
@@ -15,25 +16,31 @@ class AdminController extends Controller
     
     public function index()
     {
-        $revisor = RequestRevisor::where('is_accepted', null)
-                        ->orderBy('created_at','desc')
-                        ->first();
+        $revisor = RequestRevisor::orderBy('created_at','desc')->first();
             return view('admin.home', compact('revisor'));
     
     }
-    public function accept($request_revisors_id)
+    
+    public function accept($request_revisor_id)
     {
-        return $this->setAccepted($request_revisors_id, true);
+        return $this->setAccepted($request_revisor_id, true);
     }
-    public function reject($request_revisors_id)
-    {
-        return $this->setAccepted($request_revisors_id, false);
+    
+    public function reject($request_revisor_id)
+    {   
+        return $this->setAccepted($request_revisor_id, false);
     }
-    private function setAccepted($request_revisors_id, $value)
+
+    private function setAccepted($request_revisor_id, $value)
     {
-        $revisor = RequestRevisor::find($request_revisors_id);
-        $revisor->is_accepted = $value;
+        $request_revisor = RequestRevisor::find($request_revisor_id);
+
+        $revisor = User::where('email',$request_revisor->email)->first();
+        $revisor->is_revisor = $value;
         $revisor->save();
+
+        $request_revisor->delete();
+
         return redirect()->route('admin.home');
     }
 }

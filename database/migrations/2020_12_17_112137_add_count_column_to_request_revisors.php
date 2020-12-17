@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddIsAcceptedToRequestRevisors extends Migration
+class AddCountColumnToRequestRevisors extends Migration
 {
     /**
      * Run the migrations.
@@ -14,8 +14,7 @@ class AddIsAcceptedToRequestRevisors extends Migration
     public function up()
     {
         Schema::table('request_revisors', function (Blueprint $table) {
-            $table->boolean('is_accepted')->nullable();
-            $table->foreign('is_accepted')->references('is_revisor')->on('users');
+            $table->Integer('count')->default(1);
         });
     }
 
@@ -27,8 +26,7 @@ class AddIsAcceptedToRequestRevisors extends Migration
     public function down()
     {
         Schema::table('request_revisors', function (Blueprint $table) {
-            $table->dropForeign(['is_accepted']);
-            $table->dropColumn('is_accepted');
+            $table->dropColumn('count');
         });
     }
 }

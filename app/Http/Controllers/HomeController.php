@@ -29,13 +29,4 @@ class HomeController extends Controller
         return view ('revisor.formrevisor');
     }
 
-    /* public function newRevisor(Request $request)
-    {
-        $newRevisor = $request->except('_token');
-        
-        Mail::to('admin@admin.com')->send(new RevisorRequest($newRevisor));
-
-        return redirect()->route('home')->with('announcement.create.success','Su solicitud enviada ha sido enviada con exito!');
-    } */
-
 }

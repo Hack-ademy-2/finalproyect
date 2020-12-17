@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\User;
 use App\Models\Announcement;
 use App\Models\RequestRevisor;
 use Illuminate\Notifications\Notifiable;
@@ -52,5 +53,4 @@ class User extends Authenticatable
 
         return $this->belongsTo(RequestRevisor::class);
     }
-
 }

@@ -56,7 +56,7 @@ Route::post('/locale/{locale}', [PublicController::class,'locale'])->name('local
 Route::post('/announcement/images/upload', [AnnouncementController::class,'uploadImages'])->name('announcement.images.upload');
 
 
-Route::post('/newrevisor', [AnnouncementController::class,'revisor'])->name('revisor.store');
+Route::post('/newrevisor', [AnnouncementController::class,'requestRevisor'])->name('revisor.store');
 Route::post('/admin/revisor/{id}/accept',[AdminController::class,'accept'])->name('admin.revisor.accept');
 Route::post('/admin/revisor/{id}/reject',[AdminController::class,'reject'])->name('admin.revisor.reject');
 

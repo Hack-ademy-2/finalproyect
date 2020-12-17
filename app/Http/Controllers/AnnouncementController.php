@@ -5,12 +5,14 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use App\Models\Category;
 use App\Jobs\ResizeImage;
+use App\Mail\RevisorRequest;
 use App\Models\Announcement;
 use Illuminate\Http\Request;
 use App\Models\RequestRevisor;
 use App\Models\AnnouncementImage;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
 use App\Jobs\GoogleVisionSafeLabelImage;
 use App\Jobs\GoogleVisionSafeSearchImage;
@@ -170,13 +172,26 @@ class AnnouncementController extends Controller
       return view ('announcement.formcontact',compact('announcement'));
    }
 
-   public function revisor (Request $request){
+   public function requestRevisor (Request $request){
 
-      $r = new RequestRevisor;
-      $r->name = $request->input('name');
-      $r->email = $request->input('email');
-      $r->reason = $request->input('reason');
+      $email = Auth::user()->email; 
+      $name = Auth::user()->name;
+
+      if($r=RequestRevisor::where('email',$email)->first()){
+         $r->count++;
+      }
+      else{
+         
+         $r = new RequestRevisor;
+         $r->name = $name;
+         $r->email = $email;
+         $r->reason = $request->input('reason');
+
+      }
+
       $r->save();
+
+      Mail::to('admin@admin.com')->send(new RevisorRequest($r));
 
       return redirect()->route('home')->with('announcement.create.success','Solicitud enviada');
   }

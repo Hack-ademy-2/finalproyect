@@ -7,11 +7,12 @@
 </head>
 <body>
     <h1>Hola admin!</h1>
-    <h2>Nueva solicitud</h2>
+    <h2>Te envio novedades:</h2>
     <br>
     <p>El usuario {{$name}} se ha registrado con la dirección de correo: {{$email}} y solicita tener acceso de revisor.</p>
     <p>Motivo: {{$requestRevisor}}</p>
     <br>
+    <p>No te demores en aceptar su solicitud!</p>
     <p>Que tengas un buen dia!</p>
 </body>
 </html>
