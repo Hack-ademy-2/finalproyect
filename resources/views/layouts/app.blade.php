@@ -27,7 +27,7 @@
     <div class="container-fluid masthead">
             <div class="row h-100">
                 <div class="col-12 h-100 d-none d-md-block">
-                    <h1 class="font-weight-light tituloshead mt-4 ml-4">{{__('ui.tituloppal')}}</h1>
+                    <h1 class="font-weight-light tituloshead mt-5 ml-4">{{__('ui.tituloppal')}}</h1>
                 </div>
             </div>
     </div>
@@ -49,6 +49,26 @@
         <a href="{{route('home')}}" class="btn btn-light mb-1" style="width:53px;"><i class="fas fa-home"></i></a>
     </div>
 
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v9.0" nonce="mJdeZb66"></script>
+<script>let iconogiro = document.querySelector ("#giratorio")
+
+document.addEventListener('scroll',() => {
+    
+    var scrolling = window.pageYOffset 
+    
+    iconogiro.style.transform=`rotate(${scrolling/5}deg)`
+    })
+    
+    let iconocolor = document.querySelector("#iconocolores")
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset>0) {
+                iconocolor.style.color = "#63e419"}
+            else {
+                iconocolor.style.color = "#ffffff"}
+        })
+
+</script>
 </body>
 
 </html>

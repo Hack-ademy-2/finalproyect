@@ -10,9 +10,11 @@ use App\Models\Announcement;
 use Illuminate\Http\Request;
 use App\Models\RequestRevisor;
 use App\Models\AnnouncementImage;
+use Illuminate\Support\Facades\Bus;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Mail;
+use App\Jobs\GoogleVisionRemoveFaces;
 use Illuminate\Support\Facades\Storage;
 use App\Jobs\GoogleVisionSafeLabelImage;
 use App\Jobs\GoogleVisionSafeSearchImage;
@@ -38,7 +40,6 @@ class AnnouncementController extends Controller
 
    public function create(Request $request)
    {
-      
       $categories = Category::all();
       $uniqueSecret = $request->old('uniqueSecret', base_convert(sha1(uniqid(mt_rand())),16,36)
       );
@@ -76,14 +77,20 @@ class AnnouncementController extends Controller
          
          Storage::move($image,$newFilePath);
 
-         dispatch(new ResizeImage($newFilePath,680,400));
-         dispatch(new ResizeImage($newFilePath,300,200));
-
          $i->file = $newFilePath;
          $i->announcement_id = $a->id;
+         
          $i->save();
-         dispatch(new GoogleVisionSafeSearchImage($i->id));
-         dispatch(new GoogleVisionSafeLabelImage($i->id));
+         
+         Bus::chain([
+            new GoogleVisionSafeSearchImage($i->id),
+            new GoogleVisionSafeLabelImage($i->id),
+            new GoogleVisionRemoveFaces($i->id),
+            new ResizeImage($i->file, 300,200),
+            new ResizeImage($i->file, 680,400)
+         ])->dispatch();
+         
+      
       }
       
       File::deleteDirectory(storage_path("/app/public/temp/{$uniqueSecret}"));

@@ -1,6 +1,6 @@
-<nav class="navbar navbar-expand-lg primary-color sticky-top d-flex">
+<nav class="navbar navbar-expand-lg primary-color sticky-top d-flex py-2 scrollnav" id="navBar">
     <a class="navbar-brand text-white d-none d-sm-block pt-2 pb-0" href="{{route('home')}}">AulaPOP</a>
-    <a href="{{route('home')}}"></a><i class="fas fa-cloud-upload-alt mr-auto"></i></a>
+    <a href="{{route('home')}}"></a><i class="fas fa-cloud-upload-alt mr-auto" id="iconocolores"></i></a>
     <button class="navbar-toggler pr-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon mb-2"><i class="far fa-caret-square-down"></i></span>
   </button>
@@ -24,7 +24,6 @@
                 </div>
                 <div class="dropdown-menu dropdown-menu-right bgc-secundario" style="z-index: 1; border-style: none;" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item text-white" href="{{route('announcement.create')}}">{{ __('ui.subir') }}</a>
-                    <a class="dropdown-item text-white" href="{{route('home')}}">{{ __('ui.comprar') }}</a>
                 </div>
             </li>
                 @guest
@@ -48,8 +47,8 @@
                     {{ Auth::user()->name }}
                 </a>
 
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                <div class="dropdown-menu dropdown-menu-right bgc-secundario" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item text-white" href="{{ route('logout') }}" onclick="event.preventDefault();
                           document.getElementById('logout-form').submit();">
                         {{ __('ui.salir') }}<!-- {{ __('Logout') }} -->
                     </a>

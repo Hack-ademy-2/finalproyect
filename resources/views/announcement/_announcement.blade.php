@@ -1,23 +1,14 @@
-<div class="col-12 col-sm-6 col-lg-4 mt-3 px-0 d-flex justify-content-center">
+<div class="col-12 col-lg-4 mt-3 px-0 d-flex justify-content-center">
     <div class="card mt-4 mb-5" style="width:345px">
         <div class="card-body d-flex flex-column" style="min-height:424px;">
         <div>
             <img src="{{$announcement->images()->first()->getUrl(300, 200)}}" alt="">
         </div>
-            <h5 class="card-title font-weight-bold">{{$announcement->title}}</h5>
-            <p class="card-text" style="min-height:50px">{{substr($announcement->body, 0, 30)}} ... </p>
-            <p class="my-3"> {{ __('ui.categoria') }} <a
-                    href="{{route('announcement.category',['name'=>$announcement->category->name,'id'=>$announcement->category->id])}}"
-                    class="text-decoration-none">{{$announcement->category->name}}</a></p>
+            <h5 class="card-title font-weight-bold mt-3">{{$announcement->title}}</h5>
+            <p class="card-text text-decoration-none" style="min-height:50px">{{substr($announcement->body, 0, 15)}} ... <a href="{{route('announcement.show',['id'=>$announcement->id])}}">Seguir leyendo</a></p>
             <p class="card-text">{{ __('ui.precio') }}: {{$announcement->price}}€</p>
-            <a href="#" class="btn primary-color text-white my-3" style="z-index: 1">{{ __('ui.comprar') }}</a>
             <a href="{{route('announcement.show',['id'=>$announcement->id])}}"
                 class="btn btn-secundary-color" style="z-index: 1">{{ __('ui.descubre') }}</a>
-            <p class="mt-3 mb-0 text-right">{{ __('ui.vendedor') }}: <a href="#"
-                    class="text-decoration-none" style="z-index: 1">{{$announcement->user->name}}</a></p>
-            <p class="mt-3 mb-0 font-italic text-right">{{ __('ui.publicado') }}
-                {{$announcement->created_at->format('d/m/Y')}}
-            </p>
         </div>
     </div>
 </div>
