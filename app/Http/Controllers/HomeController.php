@@ -20,6 +20,7 @@ class HomeController extends Controller
         $announcements = Announcement::all();
         
         View::share('categories', $categories);
+        View::share('announcements', $announcements);
         
         return view('home', compact ('announcements','categories'));
     }

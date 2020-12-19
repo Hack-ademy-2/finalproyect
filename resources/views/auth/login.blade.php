@@ -3,7 +3,7 @@
 
 
 @include('layouts.buttons')
-<div class="row justify-content-center mt-4">
+<div class="row w-100 h-100 justify-content-center align-content-center">
     <div class="col-10 col-lg-6">
         <div class="card mt-3">
             <div class="card-header">{{ __('ui.inicia') }}

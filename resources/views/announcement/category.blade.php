@@ -1,40 +1,35 @@
 @extends('layouts.app')
 @section('content')
 
-<div class="row ">
+<div class="row w-100 h-100 align-content-center">
     <div class="col-12 mt-5 text-center">
         <h1>{{$category->name}}</h1>
     </div>
     @forelse ($announcements as $announcement)
-    <div class="col-12 col-md-6 col-lg-4 mt-3 d-flex justify-content-center">
-        <div class="card mt-4" style="width: 19rem;">
-            <img src="{{$announcement->images()->first()->getUrl(300, 200)}}" class="card-img-top" alt="...">
-            <div class="card-body d-flex flex-column ">
-                <h5 class="card-title font-weight-bold">{{$announcement->title}}</h5>
-                <p class="card-text">{{$announcement->body}}</p>
-                <strong class="my-3">Categoria: <a
-                        href="{{route('announcement.category',['name'=>$announcement->category->name,'id'=>$announcement->category->id])}}"
-                        class="text-decoration-none">{{$announcement->category->name}}</a></strong>
-                <a href="#" class="btn btn-info my-3">Comprar</a>
-                <a href="{{route('announcement.show',['id'=>$announcement->id])}}" class="btn btn-warning">{{ __('ui.descubre') }}</a>
-                <p class="mt-3 mb-0 text-right">Vendedor: <a href="#"
-                        class="text-decoration-none">{{$announcement->user->name}}</a></p>
-                <p class="mt-3 mb-0 font-italic text-right">Publicado el
-                    {{$announcement->created_at->format('d/m/Y')}}</p>
+    <div class="col-12 col-lg-4 mt-3 px-0 d-flex justify-content-center">
+        <div class="card mt-4 mb-5" style="width:345px">
+            <div class="card-body d-flex flex-column" style="min-height:424px;">
+                <div>
+                    <img src="{{$announcement->images()->first()->getUrl(300, 200)}}" alt="">
+                </div>
+                <h5 class="card-title font-weight-bold mt-3">{{$announcement->title}}</h5>
+                <p class="card-text text-decoration-none" style="min-height:50px">{{substr($announcement->body, 0, 15)}}
+                    ... <a href="{{route('announcement.show',['id'=>$announcement->id])}}">Seguir leyendo</a></p>
+                <p class="card-text">{{ __('ui.precio') }}: {{$announcement->price}}€</p>
+                <a href="{{route('announcement.show',['id'=>$announcement->id])}}" class="btn btn-secundary-color"
+                    style="z-index: 1">{{ __('ui.descubre') }}</a>
             </div>
         </div>
     </div>
-
-    @empty
-    <div class="col-12 mt-5 text-center">
-            <h2>{{__('ui.sin_productos')}}</h2>
-    </div>
-
-    @endforelse
-
-
-
 </div>
+
+@empty
+<div class="col-12 mt-5 text-center">
+    <h2>{{__('ui.sin_productos')}}</h2>
+</div>
+
+@endforelse
+
 <div class="row my-3">
     <div class="col-12 col-md-8 offset-md-2">
         {{$announcements->links()}}

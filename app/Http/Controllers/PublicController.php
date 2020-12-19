@@ -39,4 +39,5 @@ class PublicController extends Controller
        session()->put('locale',$locale);
        return redirect()->back();
     }
+
 }

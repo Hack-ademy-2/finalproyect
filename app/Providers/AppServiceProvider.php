@@ -31,5 +31,9 @@ class AppServiceProvider extends ServiceProvider
         $categories = Category::all();
         View::share('categories',$categories);
         Paginator::useBootstrap();
+
+        $announcements = Announcement::all();
+        View::share('announcements',$announcements);
+        Paginator::useBootstrap();
     }
 } 

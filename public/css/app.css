@@ -10984,7 +10984,7 @@ a.text-dark:focus {
 
 .main-content {
   width: 100%;
-  height: 150vh;
+  height: 50vh;
   min-height: 82vh;
   background-color: #0975a0;
 }
@@ -10997,7 +10997,7 @@ a.text-dark:focus {
 
 .masthead {
   max-width: 100%;
-  height: 122vh;
+  height: 140vh;
   background-image: url("https://www.mckinsey.com/~/media/McKinsey/Industries/Technology%20Media%20and%20Telecommunications/High%20Tech/Our%20Insights/The%20future%20of%20connectivity%20Enabling%20the%20Internet%20of%20Things/The-future-of-connectivity-1536x1536-400.jpg");
   background-size: cover;
   background-position: initial;
@@ -11016,6 +11016,10 @@ a.text-dark:focus {
     width: 684px;
     height: 202px;
   }
+}
+
+h1 {
+  font-size: 5rem;
 }
 
 .flag-icon-background,

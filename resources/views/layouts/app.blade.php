@@ -24,12 +24,9 @@
 
 <body>
     @include('layouts._navbar')
-    <div class="container-fluid masthead">
-            <div class="row h-100">
-                <div class="col-12 h-100 d-none d-md-block">
-                    <h1 class="font-weight-light tituloshead mt-5 ml-4">{{__('ui.tituloppal')}}</h1>
-                </div>
-            </div>
+    <div class="container-fluid masthead">           
+                @include('layouts.buttons')
+                @yield('content')
     </div>
     <div class="container-fluid main-content">
         <div class="row">
@@ -37,8 +34,7 @@
             <div class="col-12 alert alert-danger mt-3 text-center">{{session('access.denied.revisor.only')}}</div>
             @endif
         </div>
-        @include('layouts.buttons')
-        @yield('content')
+            @include('announcementcontent')
     </div>
 
     @include('layouts.footer')
