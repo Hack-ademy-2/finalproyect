@@ -34,6 +34,9 @@
             <div class="col-12 alert alert-danger mt-3 text-center">{{session('access.denied.revisor.only')}}</div>
             @endif
         </div>
+        <div>
+        <h1 class="col-12 text-center text-white mt-5 pt-3 mb-0">{{__('ui.tituloultimas')}}</h class="text-center">
+        </div>
             @include('announcementcontent')
     </div>
 
@@ -59,7 +62,7 @@ document.addEventListener('scroll',() => {
 
         window.addEventListener('scroll', () => {
             if (window.pageYOffset>0) {
-                iconocolor.style.color = "#63e419"}
+                iconocolor.style.color = "#ffc107"}
             else {
                 iconocolor.style.color = "#ffffff"}
         })

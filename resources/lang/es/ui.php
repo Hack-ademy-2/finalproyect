@@ -39,6 +39,7 @@ return [
     'motivo'=>'Motivo',
     'solicitudrevisor'=>'Ej: Me gustaría trabajar revisando anuncios para conseguir algo de dinero extra!',
     'sin_productos'=>'No hay productos relacionados a tu búsqueda',
+    'tituloultimas'=>'Añadidas recientemente',
 
 
 

@@ -39,6 +39,7 @@ return [
     'enviar'=>'Spedire',
     'solicitudrevisor'=>'Es: Mi piacerebbe lavorare alla revisione degli annunci per guadagnare soldi extra!',
     'sin_productos'=>'Non ci sono prodotti correlati alla tua ricerca',
+    'tituloultimas'=>'Aggiunto recentemente',
 
 
 
