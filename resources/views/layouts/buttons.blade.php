@@ -1,5 +1,5 @@
 <div class="box-lang mr-2 pr-1">
-    <button class="btn btn-dark" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+    <button class="btn btn-dark" style="padding-left:0.65rem;" type="button" id="dropdownMenuButton" data-toggle="dropdown"
         aria-haspopup="true" aria-expanded="false"><i id="giratorio" class="fas fa-globe-americas fa-2x"></i></button>
     <div class="box-idiomas pr-1" style="width:55px" aria-labelledby="dropdownMenuButton">
         <form action="{{route('locale',['locale'=>'es'])}}" method="POST" style="width:44px">

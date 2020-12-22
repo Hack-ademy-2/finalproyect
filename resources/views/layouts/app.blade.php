@@ -48,7 +48,7 @@
 
             var scrolling = window.pageYOffset
 
-            iconogiro.style.transform = `rotate(${scrolling/5}deg)`
+            iconogiro.style.transform = `rotate(${scrolling/3}deg)`
         })
 
         let iconocolor = document.querySelector("#iconocolores")
