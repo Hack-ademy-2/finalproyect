@@ -23,6 +23,7 @@
     },
     "dependencies": {
         "bootstrap": "^4.5.3",
+        "flickity": "^2.2.1",
         "jquery": "^3.5.1",
         "popper": "^1.0.1",
         "popper.js": "^1.16.1"

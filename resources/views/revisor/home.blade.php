@@ -94,7 +94,7 @@
     @else
     <div class="row">
         <div class="col-12 text-center mt-5">
-            <h3>{{ __('ui.revisorvacio') }}</h3>
+            <h1 class="letrado text-white">{{ __('ui.revisorvacio') }} !</h1>
         </div>
     </div>
     @endif

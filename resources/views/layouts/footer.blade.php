@@ -1,7 +1,7 @@
 <footer class="page-footer font-small primary-color pt-4">
 
     <!-- Footer Elements -->
-    <div class="container">
+    <div class="container-fluid">
 
         <!-- Social buttons -->
         <ul class="list-unstyled list-inline text-center mb-0">

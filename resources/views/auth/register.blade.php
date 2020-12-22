@@ -4,7 +4,7 @@
 
 @include('layouts.buttons')
 <div class="row w-100 h-100 justify-content-center align-content-center">
-    <div class="col-10 col-lg-6">
+    <div class="col-10 col-lg-5 mt-5">
         <div class="card mt-5 mb-5">
             <div class="card-header">{{ __('ui.registro') }}
                 <!-- {{ __('Register') }} -->

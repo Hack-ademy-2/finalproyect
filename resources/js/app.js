@@ -11,3 +11,4 @@ $( document ).ready(function(){
       interval: 7500
     })
 });
+

@@ -1,10 +1,13 @@
 {
-    "Motores": "Macchina",
-    "Electrodomésticos":"Elettrodomestici",
+    "Música": "Música",
+    "Autos": "Macchina",
+    "Electrodomésticos":"Elettro",
     "Libros":"Libri",
     "Juegos": "Giochi",
-    "Deporte": "Gli sport",
-    "Ocio" : "Tempo libero",
+    "Deporte": "Gli Sport",
+    "Ocio" : "Svaghi",
     "Móviles": "Cellulari",
-    "Mobiliario": "Mobilia"
+    "Mobiliario": "Mobilia",
+    "Sigue leyendo": "Continua leggere",
+    "Hola": "Ciao"
 }

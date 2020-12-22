@@ -1,10 +1,13 @@
 {
-    "Motores": "Cars",
-    "Electrodomésticos":"Home",
+    "Música": "Music",
+    "Autos": "Cars",
+    "Electro":"Home",
     "Libros":"Books",
     "Juegos": "Games",
     "Deporte": "Sports",
     "Ocio" : "Leisure",
     "Móviles": "Phones",
-    "Mobiliario": "Furniture"
+    "Mobiliario": "Furniture",
+    "Sigue leyendo": "Read more",
+    "Hola": "Hi"
 }

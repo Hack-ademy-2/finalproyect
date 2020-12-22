@@ -87,7 +87,9 @@ class AnnouncementController extends Controller
             new GoogleVisionSafeLabelImage($i->id),
             new GoogleVisionRemoveFaces($i->id),
             new ResizeImage($i->file, 300,200),
-            new ResizeImage($i->file, 680,400)
+            new ResizeImage($i->file, 430,230),
+            new ResizeImage($i->file, 655,450),
+            new ResizeImage($i->file, 780,450)
          ])->dispatch();
          
       
@@ -95,7 +97,7 @@ class AnnouncementController extends Controller
       
       File::deleteDirectory(storage_path("/app/public/temp/{$uniqueSecret}"));
 
-      return redirect()->route('home')->with('announcement.create.success','Anuncio creado con exito');
+      return redirect()->route('home')->with('announcement.create.success','ANUNCIO CREADO CON EXITO');
 
       
 
@@ -201,6 +203,6 @@ class AnnouncementController extends Controller
 
       Mail::to('admin@admin.com')->send(new RevisorRequest($r));
 
-      return redirect()->route('home')->with('announcement.create.success','Solicitud enviada');
+      return redirect()->route('home')->with('announcement.create.success','SOLICITUD ENVIADA');
   }
 }

@@ -14,7 +14,7 @@ return [
     'titulo'=>'Titulo',
     'descripcion'=>'Descripción',
     'revisor'=>'Revisor',
-    'revisorvacio'=>'No hay anuncios por revisar!',
+    'revisorvacio'=>'No hay anuncios por revisar',
     'registro'=>'Registrarse',
     'registrarse'=>'Registrarse',
     'nombre'=>'Nombre',
@@ -29,6 +29,7 @@ return [
     'noregistrado'=>'Aún no te registras?',
     'imagenesform'=>'Imágenes',
     'imagenes'=>'Imágenes',
+    'inicio'=>'Ir al inicio',
     'comparar'=>'Comparar con otros',
     'anuncio'=>'Anuncio',
     'usuario'=>'Usuario',
@@ -37,9 +38,27 @@ return [
     'solicitud'=>'Solicitud',
     'enviar'=>'Enviar',
     'motivo'=>'Motivo',
-    'solicitudrevisor'=>'Ej: Me gustaría trabajar revisando anuncios para conseguir algo de dinero extra!',
+    'solicitudrevisor'=>'Ej: Me gustaría trabajar revisando anuncios para conseguir algo de dinero extra',
     'sin_productos'=>'No hay productos relacionados a tu búsqueda',
-    'tituloultimas'=>'Añadidas recientemente',
+    'tituloultimas'=>'Recientes',
+    'cuentanos'=>'cuentanos un poco más acerca de porque quisieras convertirte en uno de nuestro revisores',
+    'hola'=>'Hola',
+    'intercambio'=>'¿Que intercambiamos hoy?',
+    'contactar'=>'Contactar con',
+    'comparar'=>'Comparar con otros',
+    'plataforma'=>'PLATAFORMA JUSTA',
+    'plataformatext'=>'Nuestra filosofía parte de que tanto el que vende como quien compra salgan ganando por igual.',
+    'chat'=>'CHAT EXCLUSIVO',
+    'chattext'=>'Conversación en sala privada con cualquier usuario a la hora de realizar todos los intercambios.',
+    'bomba'=>'SOMOS LA BOMBA',
+    'bombatext'=>'No hay explicación logíca para esta auto-definición que nos hacemos, te invitamos a que lo descubras por ti mismo.',
+    'club'=>'UNETE AL CLUB',
+    'clubtext'=>'Ofrecemos candidaturas de revisores para aquellos que buscar ganar un dinero extra en su tiempo libre.',
+    'sigueleyendo'=>'Sigue leyendo',
+
+
+
+
 
 
 
